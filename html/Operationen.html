@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/print.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_highlightCode();
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+    window.print();
+}
+</script>
+</head>
+<body>
+
+<h1 style="background-color:#9BB9D8;">Operationen</h1>
+<h2>Einleitung</h2>
+<p>Aus der Mathematik kennst du den Begriff der Operationen bereits. Operationen bei Zahlen sind z.B. die Addition, die Subtraktion, die Multiplikation und die Division.</p>
+<p>
+Wenn man programmiert braucht man diese Operationen auch. Es gibt aber noch mehr!<br />
+Genau genommen gibt es f&uuml;r jeden Datentyp (also auch f&uuml;r Zeichenketten) genau definierte Operationen.</p>
+<p>In diesem Kapitel lernst du die Operationen f&uuml;r Zahlen und Zeichenketten kennen und anwenden.<br />
+Du lernst auch, wie du aus einer Zeichenkette eine Zahl machen kannst und umgekehrt, wie du eine Zahl in eine Zeichenkette umwandeln kannst.<br />
+Ausserdem wirst du viele n&uuml;tzliche und interessante kleine Programme schreiben!</p>
+<p>Inhalt:<br />
+<a href="Operationen_2.html" class="nextlink">Operationen mit Zahlen</a><br />
+<a href="Operationen_4.html" class="nextlink">Operationen mit Zeichenketten</a><br />
+<a href="Operationen_5.html" class="nextlink">Datentypumwandlung</a><br />
+</p>
+
+
+<h2>Operationen mit Zahlen I</h2>
+<p>Du kannst die &uuml;blichen mathematischen Operatoren verwenden. Sie werden aber z.T. anders geschrieben als von Hand:</p>
+<table>
+<tr>
+<td>+</td>
+<td>Addition</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Subtraktion</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multipliktion</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Division</td>
+</tr>
+</table>
+<p>
+Das Resultat der Operation kann entweder mit einer Zuweisung in eine Variable gespeichert werden oder direkt ausgegeben werden.
+</p>
+<div class="code">a = 3+5;
+b = a-4;
+c = a*b;
+d = c/2; //d hat den Wert 16
+output(a*b); //gibt 32 aus
+</div>
+
+<p>
+Du kannst auch mehrere Operatoren in einer Reihe notieren. Es gilt dann die &uuml;bliche Punkt-vor-Strich-Regel. Du kannst auch Klammern setzen.
+</p>
+<div class="code">a = 2+6/2;   //a hat den Wert 5
+b = (2+6)/2; //h bat den Wert 4
+</div>
+
+<h2>Operationen mit Zahlen II</h2>
+<p>Wahrscheinlich kennst du die Modulo-Division nicht. Bei der Modulo-Division werden zwei Werte dividiert; das Ergebnis ist aber der Restwert der Division.<br /> Daf&uuml;r wird das Zeichen % verwendet - hat aber nichts mit Prozent zu tun!
+</p>
+<div class="code">d = 17/5; //d hat den Wert 3.4
+r = 17%5; //r hat den Wert 2
+</div>
+<p>
+Es gibt n&uuml;tzliche Abk&uuml;rzungen f&uuml;r h&auml;ufig verwendete Operationen. Oft kommt es vor, dass man eine Zahl um 1 erh&ouml;hen muss.
+Du kannst das so schreiben:
+</p>
+<div class="code">z = z+1; //erh&ouml;ht z um 1
+//oder auch abgek&uuml;rzt:
+z++; //erh&ouml;ht z um 1
+</div>
+<p>Das selbe funktioniert auch mit der Verkleinerung um 1:</p>
+<div class="code">z = z-1; //verkleinert um 1
+z--; //verkleinert auch um 1
+</div>
+<p>Weitere n&uuml;tzliche Abk&uuml;rzungen sind:</p>
+<div class="code">z = z+3; 
+z += 3; //addiert die Zahl zu z
+
+z = z-5;
+z -= 5; //subtrahiert die Zahl von z
+</div>
+
+<h2>Operationen mit Zeichenketten</h2>
+<p>F&uuml;r Zeichenketten gibt es nur eine Operation. Die Zeichenkettenverkn&uuml;pfung. Dabei k&ouml;nnen zwei Zeichenketten mit dem +-Operator zusammengeh&auml;ngt werden.
+</p>
+<div class="code">a='Hallo ';
+b='Welt!';
+satz = a+b; //satz hat nun den Wert 'Hallo Welt!'
+output(a+'du!'); //gibt 'Hallo du!' aus
+</div>
+
+<h2>Zeichenketten in Zahlen umwandeln</h2>
+<p>Das Problem von <code>input()</code> und von <code>prompt()</code> ist, dass sie eingegebene Zahlen als Zeichenketten zur&uuml;ckgeben.<br />
+Folgender Code f&uuml;hrt deshalb zu einem Fehler:
+</p>
+<div class="code">z = input(); //Eingabe z.B. 3
+z = z+z+z;
+output(z); //gibt 333 aus
+</div>
+<p>Man muss die Zeichenkette zuerst in eine Zahl umwandeln.</p>
+<div class="code">s = '1234'; //s ist eine Zeichenkette
+s = Number(s); //s ist eine Zahl
+</div>
+<p>
+Das obige Beispiel muss also so abgewandelt werden:</p>
+<div class="code">z = input(); //Eingabe z.B. 3
+z = Number(z); //wandelt z in eine Zahl um
+z = z+z+z;
+output(z); //gibt 9 aus
+</div>
+<div class="achtung">
+Die Umwandlung funktioniert nur, wenn in der Zeichenkette nur Ziffern enthalten sind. Sonst gibt Number() den Wert NaN zur&uuml;ck, was "Not a Number" bedeutet - also "Keine Zahl".
+</div>
+
+<h2>Zahlen in Zeichenketten umwandeln</h2>
+<p>Auch umgekehrt kann es zu Problemen kommen. Deshalb kann man mit der <span class="glossar" onclick="ProgABC_OpenGlossar('JS_String')">Funktion String()</span> Zahlen in Zeichenketten umwandeln:
+</p>
+<div class="code">z = 1234;
+s = String(z); //z ist die Zahl 1234, s der String '1234'
+</div>
+</body>
+</html>

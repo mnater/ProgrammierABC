@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_Checker.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_UIinit();
+        document.getElementById('infobtn').style.visibility='hidden';
+        document.getElementById('questbtn').style.visibility='hidden';
+        document.getElementById('codelabbtn').style.visibility='visible';
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+}
+</script>
+</head>
+<body>
+<div id="logo">
+</div>
+<div id="navitop">
+<span id="infobtn">
+<img src="../graf/btninfo.gif" width="80" height="80" alt="goto info" />
+</span>
+<span id="questbtn">
+<img src="../graf/btnquest.gif" width="80" height="80" alt="goto quest" />
+</span>
+<span id="codelabbtn">
+<img src="../graf/btncodelab.gif" width="80" height="80" alt="goto codelab" />
+</span>
+</div>
+
+<div id="naviright">
+<img src="../graf/bckrighttop.gif" width="151" height="34" alt="layoutbild" />
+<span id="rightnavibtn">
+<a href="IO_1.html" title="N&auml;chstes Kapitel" rel="chapter"><img src="../graf/btnlast.gif" width="100" height="50" alt="Werte und Variablen" /></a><br />
+<a href="Werte_Quiz_5.html" title="N&auml;chste Seite" rel="next"><img src="../graf/btnnext.gif" width="100" height="50" alt="Vorw&auml;rts" /></a><br />
+</span>
+</div>
+
+<div id="navileft">
+<span id="leftnavibtn">
+<a href="Programm_1.html" title="Vorhergehendes Kapitel" rel="next"><img src="../graf/btnfirst.gif" width="100" height="50" alt="Einstieg" /></a><br />
+<a href="Werte_Quiz_3.html" title="Vorhergehende Seite" rel="next"><img src="../graf/btnprev.gif" width="100" height="50" alt="Zur&uuml;ck" /></a><br />
+</span>
+</div>
+
+<div id="inhalte">
+<h2>Quiz</h2>
+<p>
+Schreibe eine Zeile Code, die der Variable <code>Nachname</code> den Wert 'Einstein' zuordnet!</p>
+<form action="" name="check">
+<input type="text" name="antwort" size="30"></input>
+</form>
+<a href="javascript:ProgABC_Checker_checkString(document.check,new Array('Nachname = \'Einstein\';','Nachname=\'Einstein\';','var Nachname = \'Einstein\';','var Nachname=\'Einstein\';'));">Auswertung:</a><span id="auswertung"> <span>
+</div>
+
+<div id="info">
+<img src="../graf/closebox.png" id="closeinfobtn" width="20px" height="20px" alt="close" />
+<p></p>
+</div>
+
+<div id="quest">
+<img src="../graf/closebox.png" id="closequestbtn" width="20px" height="20px" alt="close" />
+<p></p>
+</div>
+
+
+
+<div id="navibottom">
+<img id="layout2" src="../graf/bckbottomleft.gif" width="11" height="71" alt="layoutbild" />
+<img id="layout" src="../graf/bckbottomright.gif" width="151" height="71" alt="layoutbild"/><br />
+Pfad:&nbsp;&nbsp;<a href="toc.html">Inhalte</a>&nbsp;/&nbsp;<a href="Werte_Quiz_1.html">Werte Quiz</a>&nbsp;/&nbsp;Frage 4<br />
+Frage:&nbsp;<a href="Werte_Quiz_1.html">1</a>&nbsp;<a href="Werte_Quiz_2.html">2</a>&nbsp;<a href="Werte_Quiz_3.html">3</a>&nbsp;4&nbsp;<a href="Werte_Quiz_5.html">5</a></div>
+
+</body>
+</html>

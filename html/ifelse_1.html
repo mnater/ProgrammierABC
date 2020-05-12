@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_UIinit();
+        document.getElementById('infobtn').style.visibility='hidden';
+        document.getElementById('questbtn').style.visibility='hidden';
+        document.getElementById('codelabbtn').style.visibility='hidden';
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+}
+</script>
+</head>
+<body>
+<div id="logo">
+</div>
+<div id="navitop">
+<span id="infobtn">
+<img src="../graf/btninfo.gif" width="80" height="80" alt="goto info" />
+</span>
+<span id="questbtn">
+<img src="../graf/btnquest.gif" width="80" height="80" alt="goto quest" />
+</span>
+<span id="codelabbtn">
+<img src="../graf/btncodelab.gif" width="80" height="80" alt="goto codelab" />
+</span>
+</div>
+
+<div id="naviright">
+<img src="../graf/bckrighttop.gif" width="151" height="34" alt="layoutbild" />
+<span id="rightnavibtn">
+<a href="Schleifen_1.html" title="N&auml;chstes Kapitel" rel="chapter"><img src="../graf/btnlast.gif" width="100" height="50" alt="Werte und Variablen" /></a><br />
+<a href="ifelse_2.html" title="N&auml;chste Seite" rel="next"><img src="../graf/btnnext.gif" width="100" height="50" alt="Vorw&auml;rts" /></a><br />
+</span>
+</div>
+
+<div id="navileft">
+<span id="leftnavibtn">
+<a href="Bool_1.html" title="Vorhergehendes Kapitel" rel="next"><img src="../graf/btnfirst.gif" width="100" height="50" alt="Einstieg" /></a><br />
+<a href="Bool_Aufgabe_1.html" title="Vorhergehende Seite" rel="next"><img src="../graf/btnprev.gif" width="100" height="50" alt="Zur&uuml;ck" /></a><br />
+</span>
+</div>
+
+<div id="adminbuttons">
+<a href="ifelse.html" target="_blank" class="printme" title="Kapitel drucken"><img src="../graf/xdrucken.gif" width="16px" height="16px" /></a>
+</div>
+
+<div id="inhalte">
+<h1 style="background-color:#829DC4;">Verzweigungen und Fallunterscheidungen</h1>
+<h2>Einleitung</h2>
+<p>Oft muss ein Programm - je nach Eingabe oder berechnetem Wert - auf verschiedene Arten weiterfahren.</p>
+<p>Ein wichtiges Mittel bei der Programmierung ist deshalb die sogenannte Verzweigung.<br />
+Bei einer Verzweigung wird der Programmcode in verschiedene Bl&ouml;cke unterteilt. Je nach dem ob eine angegebene Aussage <span class="glossar" onclick="ProgABC_OpenGlossar('Boolean')"><code>true</code> oder <code>false</code></span> ist, wird dann der eine oder andere Codeblock ausgef&uuml;hrt.</p>
+<p>Du wirst in diesem Kapitel lernen, wie man Fallunterscheidungen programmiert.</p>
+<p>Inhalt:<br />
+<a href="ifelse_2.html" class="nextlink">Einfaches if()</a><br />
+<a href="ifelse_3.html" class="nextlink">if() else</a><br />
+<a href="ifelse_5.html" class="nextlink">logische Verkn&uuml;pfungen</a><br />
+<a href="ifelse_6.html" class="nextlink">switch() case</a><br />
+</p>
+</div>
+
+<div id="info">
+<img src="../graf/closebox.png" id="closeinfobtn" width="20px" height="20px" alt="close" />
+</div>
+
+<div id="quest">
+<img src="../graf/closebox.png" id="closequestbtn" width="20px" height="20px" alt="close" />
+</div>
+
+<div id="codelabtext" style="display:none"> </div>
+
+
+<div id="navibottom">
+<img id="layout2" src="../graf/bckbottomleft.gif" width="11" height="71" alt="layoutbild" />
+<img id="layout" src="../graf/bckbottomright.gif" width="151" height="71" alt="layoutbild"/><br />
+Pfad:&nbsp;&nbsp;<a href="toc.html">Inhalte</a>&nbsp;/&nbsp;<a href="ifelse_1.html">Verzweigungen</a>&nbsp;/&nbsp;Seite 1<br />
+Seite:&nbsp;1&nbsp;<a href="ifelse_2.html">2</a>&nbsp;<a href="ifelse_3.html">3</a>&nbsp;<a href="ifelse_4.html">4</a>&nbsp;<a href="ifelse_5.html">5</a>&nbsp;<a href="ifelse_6.html">6</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_UIinit();
+        document.getElementById('infobtn').style.visibility='hidden';
+        document.getElementById('questbtn').style.visibility='visible';
+        document.getElementById('codelabbtn').style.visibility='visible';
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+}
+</script>
+</head>
+<body>
+<div id="logo">
+</div>
+<div id="navitop">
+<span id="infobtn">
+<img src="../graf/btninfo.gif" width="80" height="80" alt="goto info" />
+</span>
+<span id="questbtn">
+<img src="../graf/btnquest.gif" width="80" height="80" alt="goto quest" />
+</span>
+<span id="codelabbtn">
+<img src="../graf/btncodelab.gif" width="80" height="80" alt="goto codelab" />
+</span>
+</div>
+
+<div id="naviright">
+<img src="../graf/bckrighttop.gif" width="151" height="34" alt="layoutbild" />
+<span id="rightnavibtn">
+<a href="ende.html"><img src="../graf/btnlast.gif" width="100" height="50" alt="Index" /></a><br />
+<a href="Funktionen_7.html"><img src="../graf/btnnext.gif" width="100" height="50" alt="Vorw&auml;rts" /></a><br />
+</span>
+</div>
+
+<div id="navileft">
+<span id="leftnavibtn">
+<a href="Schleifen_1.html"><img src="../graf/btnfirst.gif" width="100" height="50" alt="Schleifen" /></a><br />
+<a href="Funktionen_5.html"><img src="../graf/btnprev.gif" width="100" height="50" alt="Zur&uuml;ck" /></a><br />
+</span>
+</div>
+
+<div id="inhalte">
+<h2>G&uuml;ltigkeitsbereich von Variablen</h2>
+<p>Bei gr&ouml;sseren Programmen mit mehreren Funktionen und vielen Variablen besteht schnell die Gefahr, dass versehentlich schon verwendete Variablennamen verwendet werden.</p>
+<p>Bei folgendem Programm, welches das kleine 1x1 ausgeben soll, gibt es ein ernstes Problem:</p>
+<div class="code">//Hauptprogramm
+for(i=1; i&lt;=10; i++)
+{
+    z=reihe(i);
+    output(z);
+}
+
+function reihe(n)
+{
+    r='';
+    for(i=1; i&lt;=10; i++)
+    {
+        r=r+String(i*n)+', ';
+    }
+    return r;
+}</div>
+<p>Die Variable <code>i</code> hat nach dem ersten Aufruf der Funktion <code>reihe()</code> den Wert <code>10</code>. Die Schleife des Hauptprogramms wird also nur einmal durchlaufen.</p>
+<p>Das Problem liegt darin, dass die Variable <code>i</code> eine globale Variable ist. Das heisst ihr Wert kann von allen Programmteilen ge&auml;ndert werden.<br />
+Eine L&ouml;sung besteht darin, die Variable <code>i</code> in der Funktion <code>reihe()</code> anders zu benennen. Dies ist aber nicht so klug, denn der neue Variablenname k&ouml;nnte zu neuen Fehlern f&uuml;hren...</p>
+<p>Um solche Fehler zu verhindern, kann man die Variablen lokal definieren. Lokale Variablen sind nur in der Funktion "sichtbar" in der sie definiert wurden.<br />
+Variablen sind lokal, wenn vor ihrer ersten Definition das Codewort <code>var</code> steht:</p>
+<div class="code">//Hauptprogramm
+for(i=1; i&lt;=10; i++)
+{
+    z=reihe(i);
+    output(z);
+}
+
+function reihe(n)
+{
+    var r='';
+    var i;
+    for(i=1; i&lt;=10; i++)
+    {
+        r=r+String(i*n)+', ';
+    }
+    return r;
+}
+</div>
+</div>
+
+<div id="info">
+<img src="../graf/closebox.png" id="closeinfobtn" width="20px" height="20px" alt="close" />
+</div>
+
+<div id="quest">
+<img src="../graf/closebox.png" id="closequestbtn" width="20px" height="20px" alt="close" />
+Verbessere das fehlerhafte Programm im CodeLab, indem du die Variablen in der Funktion mit <code>var</code> als lokale Variablen deklarierst.
+</div>
+
+<div id="codelabtext" style="display:none">//Hauptprogramm
+for(i=1; i<=10; i++)
+{
+    z=reihe(i);
+    output(z);
+}
+
+function reihe(n)
+{
+    r='';
+    for(i=1; i<=10; i++)
+    {
+        r=r+String(i*n)+', ';
+    }
+    return r;
+}
+</div>
+
+
+
+<div id="navibottom">
+<img id="layout2" src="../graf/bckbottomleft.gif" width="11" height="71" alt="layoutbild" />
+<img id="layout" src="../graf/bckbottomright.gif" width="151" height="71" alt="layoutbild"/><br />
+Pfad:&nbsp;&nbsp;<a href="toc.html">Inhalte</a>&nbsp;/&nbsp;<a href="Funktionen_1.html">Funktionen</a>&nbsp;/&nbsp;Seite 6<br />
+Seite:&nbsp;<a href="Funktionen_1.html">1</a>&nbsp;<a href="Funktionen_2.html">2</a>&nbsp;<a href="Funktionen_3.html">3</a>&nbsp;<a href="Funktionen_4.html">4</a>&nbsp;<a href="Funktionen_5.html">5</a>&nbsp;6&nbsp;<a href="Funktionen_7.html">7</a>
+
+</body>
+</html>

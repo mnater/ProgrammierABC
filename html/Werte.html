@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/print.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_highlightCode();
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+    window.print();
+}
+</script>
+</head>
+<body>
+
+<h1 style="background-color:#B0D1EB;">Werte und Variablen</h1>
+<p>
+In diesem Kapitel lernst du, wie du Daten in einem Programm speichern kannst.
+Du lernst auch verschiedene Datentypen kennen.</p>
+<p>
+Du wirst auch deine ersten Zeilen Programmcode schreiben. Wenn etwas nicht sofort funktioniert, denk daran, was du &uuml;ber <a href="Programm_7.html" class="intlink">formale Sprachen und Debugging</a> gelernt hast.</p>
+<p>Inhalt:<br />
+<a href="Werte_2.html" class="nextlink">Datentypen</a><br />
+<a href="Werte_3.html" class="nextlink">Variablen</a><br />
+<a href="Werte_4.html" class="nextlink">Variablennamen</a><br />
+<a href="Werte_5.html" class="nextlink">Wertzuweisung</a><br />
+<a href="Werte_6.html" class="nextlink">Variablenzuweisung</a><br />
+<a href="Werte_7.html" class="nextlink">Erste &uuml;bung im CodeLab</a><br />
+</p>
+
+<h2>Datentypen</h2>
+<p>
+Beim Programmieren werden <span class="glossar" onclick="ProgABC_OpenGlossar('Zahl')">Zahlen</span> und <span class="glossar" onclick="ProgABC_OpenGlossar('Zeichenkette')">Zeichenketten</span> unterschiedlich behandelt.</p>
+<p>
+Mit Zahlen (z.B. 4, 300 oder 3.56) kann gerechnet werden; das Ergebnis ist dann wieder eine Zahl.</p>
+<p>Zeichenketten sind einzelne Buchstaben, W&ouml;rter oder ganze S&auml;tze (z.B. 'b', 'blume' oder 'Hallo Welt!'). Zeichenketten werden immer in Anf&uuml;hrungs- und Schlusszeichen notiert. Es k&ouml;nnen auch Ziffern in Zeichenketten vorkommen (z.B. 'A4' oder '1234'). Mit diesen Zahlen kann aber nicht gerechnet werden!</p>
+<p>Zahlen und Zeichenketten sind zwei verschiedene <span class="glossar" onclick="ProgABC_OpenGlossar('Datentyp')">Datentypen</span>.</p>
+<div class="achtung"><ul>
+<li>Um Fehler zu vermeiden, solltest du immer genau wissen, mit welchem Datentyp du gerade arbeitest.</li>
+<li>Dezimalzahlen werden mit einem Punkt geschrieben, obwohl man von Nachkommastellen spricht!<br />
+Bsp.: 3<img src="../graf/blinkpt.gif" alt="blinkpoint" />56</li>
+</ul></div>
+
+<h2>Variablen</h2>
+<p>
+Du kennst vielleicht den Begriff 'Variable' schon aus der Mathematik. Beim Programmieren sind Variablen sehr wichtig.</p>
+<p>Variablen haben einen Namen und einen Wert. 
+In einer Variable kann irgend ein Wert irgendeines <span class="glossar" onclick="ProgABC_OpenGlossar('Datentyp')">Datentyps</span> gespeichert werden.</p>
+<div class="code">pi = 3.14159265358979;
+begruessung = 'Guten Tag!';</div>
+<p>In diesen Beispielen wird in der Variable "pi" die Zahl 3.14159265358979 gespeichert. Und der Variable "begruessung" die Zeichenkette 'Guten Tag!' zugeordnet.<br />
+So muss man nicht mehr jedesmal, wenn man im Programm die Zahl &pi; braucht, die lange Zahl eintippen, sondern kann einfach die Variable "pi" verwenden.</p>
+<p>Variablen bleiben nur so lange gespeichert, wie das Programm l&auml;uft.</p>
+
+<h2>Variablennamen</h2>
+<p>
+Verschiedene Variablen m&uuml;ssen auch verschiedene Namen haben. In der Mathematik braucht man daf&uuml;r normalerweise einen Buchstaben.<br />
+Beim Programmieren k&ouml;nnen Variablen auch ein ganzes Wort als Namen haben.</p>
+<p>
+Zum Beispiel:</p>
+<div class="code">x
+meineAdresse
+pi
+mein_passwort
+</div>
+<div class="achtung">
+F&uuml;r Variablennamen gelten folgende Regeln:
+<ul>
+<li>Sie d&uuml;rfen keine Leerzeichen enthalten</li>
+<li>Sie d&uuml;rfen nur aus Buchstaben und Ziffern bestehen - das erste Zeichen muss ein Buchstabe sein</li>
+<li>Einziges erlaubtes Sonderzeichen ist der Unterstrich (Umlaute sind verboten!)</li>
+</ul>
+</div>
+
+
+<h2>Wertzuweisung</h2>
+<p>
+Einer Variable wird ein Wert zugewiesen, indem man zuerst den Variablennamen schreibt, dann ein = und dann den Wert.<br />
+Die Anweisung muss mit einem Strichpunkt (;) abgeschlossen werden.</p>
+<p>Zum Beispiel:</p>
+<div class="code">
+Variablenname = Wert;
+pi = 3.14159265358979;
+begruessung = 'Guten Tag!';
+</div>
+<p>Die Variable "pi" ist jetzt eine <span class="glossar" onclick="ProgABC_OpenGlossar('Zahl')">Zahl</span> mit dem Wert 3.14159265358979.<br />
+die Variable "begruessung" dagegen ist eine <span class="glossar" onclick="ProgABC_OpenGlossar('Zeichenkette')">Zeichenkette</span> mit dem Wert "Guten Tag!".</p>
+<p>
+Eine Variable hat also einen bestimmten <span class="glossar" onclick="ProgABC_OpenGlossar('Datentyp')">Datentyp</span> und einen bestimmten Wert.
+</p>
+<div class="achtung">
+Die Zuweisung darf nicht umgekehrt werden!
+<p class="wrongcode">3.14159265358979 = pi;</p>
+Ergibt einen Syntaxfehler.
+</div>
+
+<h2>Variablenzuweisung</h2>
+<p>
+Einer Variable kann auch der Wert einer anderen Variable zugeordnet werden.</p>
+<p>
+Zum Beispiel:</p>
+<div class="code">pi = 3.14159265358979;
+kreiszahl = pi;
+</div>
+<p>Die Variable "kreiszahl" ist jetzt eine Zahl mit dem Wert 3.14159265358979.
+</p>
+
+<h2>Erste &Uuml;bung im CodeLab</h2>
+<p>Es ist h&ouml;chste Zeit, dass du endlich selbst programmierst!<br />
+In diesem Programmierkurs kannst du im CodeLab jederzeit kleine Programme ausprobieren.</p>
+<p>
+Dazu musst du</p>
+<ol>
+<li>Das CodeLab &ouml;ffnen</li>
+<li>Auf "&Auml;ndern" umschalten</li>
+<li>Den Code eintippen</li>
+<li>Den Code "Ausf&uuml;hren"</li>
+</ol>
+<p>Um einen Wert auszugeben, musst du den Befehl <span class="glossar" onclick="ProgABC_OpenGlossar('JS_output');">output(wert);</span> verwenden.
+</p>
+<p>
+Versuch es einmal mit folgendem Code:</p>
+<div class="code">pi = 3.14159265358979;
+text = 'pi = ';
+output(text);
+output(pi);
+</div>
+</body>
+</html>

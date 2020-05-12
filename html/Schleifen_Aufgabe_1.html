@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_UIinit();
+        document.getElementById('infobtn').style.visibility='hidden';
+        document.getElementById('questbtn').style.visibility='hidden';
+        document.getElementById('codelabbtn').style.visibility='visible';
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+}
+</script>
+</head>
+<body>
+<div id="logo">
+</div>
+<div id="navitop">
+<span id="infobtn">
+<img src="../graf/btninfo.gif" width="80" height="80" alt="goto info" />
+</span>
+<span id="questbtn">
+<img src="../graf/btnquest.gif" width="80" height="80" alt="goto quest" />
+</span>
+<span id="codelabbtn">
+<img src="../graf/btncodelab.gif" width="80" height="80" alt="goto codelab" />
+</span>
+</div>
+
+<div id="naviright">
+<img src="../graf/bckrighttop.gif" width="151" height="34" alt="layoutbild" />
+<span id="rightnavibtn">
+<a href="Funktionen_1.html" title="N&auml;chstes Kapitel" rel="chapter"><img src="../graf/btnlast.gif" width="100" height="50" alt="Werte und Variablen" /></a><br />
+<a href="Schleifen_Aufgabe_2.html" title="N&auml;chste Seite" rel="next"><img src="../graf/btnnext.gif" width="100" height="50" alt="Vorw&auml;rts" /></a><br />
+</span>
+</div>
+
+<div id="navileft">
+<span id="leftnavibtn">
+<a href="ifelse_1.html" title="Vorhergehendes Kapitel" rel="next"><img src="../graf/btnfirst.gif" width="100" height="50" alt="Einstieg" /></a><br />
+<a href="Schleifen_Quiz_2.html" title="Vorhergehende Seite" rel="next"><img src="../graf/btnprev.gif" width="100" height="50" alt="Zur&uuml;ck" /></a><br />
+</span>
+</div>
+
+<div id="inhalte">
+<h2>Aufgabe Schleifen_1 (P&nbsp;*) <a href="../docs/Schleifen_Aufgabe_1.pdf" title="Aufgabe als PDF"><img src="../graf/pdf.png" width="16" height="19" style="vertical-align:middle" alt="pdf" /></a></h2>
+<div class="code">i=0;
+while(i<2)
+{
+	i++;
+	output(i);
+}
+output('Ende');
+</div>
+<div class="code">i=0;
+do {
+    i++;
+    output(i);
+} while(i<2);
+output('Ende');
+</div>
+<ol type="a">
+<li>Vergleiche die beiden Programme (while-Schleife und do-while-Schleife). Warum sind die Ausgaben verschieden? Bedingung und Schleifenk&ouml;rper sind doch gleich!</li>
+<li>Schreibe ein kleines Programm, dass alle Zahlen von 1 bis 10 ausgibt, jeweils mit einer while-, einer do-while- und mit einer for-Schleife.
+Welcher Schleifentyp ist am besten daf&uuml;r geeignet?</li>
+<li>&Auml;ndere das Programm so, dass es die Zahlen umgekehrt, also von 10 bis 1 ausgibt.</li>
+<li>&Auml;ndere den Zahlenbereich (1 bis 1000, 1 bis 1'000'000 usw). Kannst du Geschwindigkeitsunterschiede feststellen?</li>
+<li>Halte deine Ergebnisse im Journal fest!</li>
+<ol>
+</div>
+
+<div id="info">
+<img src="../graf/closebox.png" id="closeinfobtn" width="20px" height="20px" alt="close" />
+</div>
+
+<div id="quest">
+<img src="../graf/closebox.png" id="closequestbtn" width="20px" height="20px" alt="close" />
+</div>
+
+<div id="codelabtext" style="display:none">i=0;
+while(i<2)
+{
+	i++;
+	output(i);
+}
+output('Ende');
+
+i=0;
+do {
+    i++;
+    output(i);
+} while(i<2);
+output('Ende');
+</div>
+
+
+<div id="navibottom">
+<img id="layout2" src="../graf/bckbottomleft.gif" width="11" height="71" alt="layoutbild" />
+<img id="layout" src="../graf/bckbottomright.gif" width="151" height="71" alt="layoutbild"/><br />
+Pfad:&nbsp;&nbsp;<a href="toc.html">Inhalte</a>&nbsp;/&nbsp;<a href="Schleifen_Aufgabe_3.html">Schleifen</a>&nbsp;/&nbsp;Aufgabe 1<br />
+Aufgabe:&nbsp;1&nbsp;<a href="Schleifen_Aufgabe_2.html">2</a>&nbsp;<a href="Schleifen_Aufgabe_3.html">3</a>
+</div>
+
+</body>
+</html>

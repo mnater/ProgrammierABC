@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/print.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_highlightCode();
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+    window.print();
+}
+</script>
+</head>
+<body>
+
+<h1 style="background-color:#8EABCE;">Vergleichsoperationen</h1>
+</h1>
+<h2>Einleitung</h2>
+<p>Oft muss man vergleichen, ob zwei Werte gleich sind, oder ob der eine gr&ouml;sser ist, als der andere.<br />
+Im ersten Teil dieses Kapitels lernst du die Vergleichsoperatoren kennen.</p>
+<p>Ein Vergleich kann wahr oder falsch sein. Um mehrere Vergleiche zusammenzuh&auml;ngen, verwendet man logische Operatoren.<br />
+Im zweiten Teil dieses Kapitels lernst du die wichtigsten logischen Operatoren kennen.</p>
+<p>Nach diesem Kapitel wirst du noch keine besondere Programme schreiben k&ouml;nnen. Aber es ist wichtig, dass du alles gut verstanden hast, bevor du die Kapitel <a href="ifelse_1.html" class="intlink">"Verzweigungen"</a> und <a href="Schleifen_1.html" class="intlink">"Schleifen"</a> bearbeitest.</p>
+<p>Inhalt:<br />
+<a href="Bool_2.html" class="nextlink">true und false</a><br />
+<a href="Bool_3.html" class="nextlink">Gleich und Ungleich</a><br />
+<a href="Bool_4.html" class="nextlink">Gr&ouml;sser und Kleiner</a><br />
+<br />
+<a href="Bool_5.html" class="nextlink">logische Operatoren</a><br />
+</p>
+
+
+<h2>true und false</h2>
+<p>Neben den Datentypen <span class="glossar" onclick="ProgABC_OpenGlossar('Zahl')">Zahl</span> und <span class="glossar" onclick="ProgABC_OpenGlossar('Zeichenkette')">Zeichenkette</span>, die du schon kennst, gibt es noch weitere Datentypen. Ganz wichtig ist der Datentyp <span class="glossar" onclick="ProgABC_OpenGlossar('Boolean')">Boolean</span>.<br />
+F&uuml;r den Datentyp "Boolean" gibt es nur zwei Werte: <code>true</code> (wahr) oder <code>false</code> (falsch).</p>
+<p>Das Resultat von Aussagen, die wahr oder falsch sein k&ouml;nnen, hat den Datentyp Boolean. Solche Aussagen sind unter anderem Gleichungen und Ungleichungen.</p>
+<p>Beispiel:</p>
+<div class="code">
+a = 5;
+b = 2 + 3;
+"a ist gleich b" //diese Aussage ist true.
+"a ist kleiner b" //diese Aussage ist false.
+"a ist gr&ouml;sser oder gleich b" //diese Aussage ist true.
+</div>
+
+
+<h2>Gleich und Ungleich</h2>
+<p>Oft will man wissen, ob zwei Werte gleich oder ungleich sind. Daf&uuml;r gibt es folgende Vergleichsoperatoren:
+</p>
+<table>
+<tr>
+<td>==</td>
+<td>ist gleich</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>ist ungleich</td>
+</tr>
+</table>
+<p>Beispiel:</p>
+<div class="code">a = 5;
+b = 2 + 3;
+output(a==b); //true
+output(a!=b); //false
+</div>
+<p class="achtung">Es passiert oft, dass man den Zuweisungsoperator (=) und den Vergleichsoperator (==) verwechselt!
+Der Interpreter erkennt dies nicht immer als Fehler, was zu seltsamen Resultaten f&uuml;hren kann...</p>
+
+<h2>Gr&ouml;sser und Kleiner</h2>
+<p>Es gibt noch weitere Vergleichsoperatoren, die alle jeweils <code>true</code> oder <code>false</code> sein k&ouml;nnen:</p>
+<table>
+<tr>
+<td>&lt;</td>
+<td>ist kleiner als</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>ist gr&ouml;sser als</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>ist kleiner oder gleich</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>ist gr&ouml;sser oder gleich</td>
+</tr>
+</table>
+<p>Das Resultat von Vergleichen (also der Wert <code>true</code> oder <code>false</code>) l&auml;sst sich wie jeder andere Wert in einer Variable speichern. Die Variable ist dann automatisch vom Datentyp <span class="glossar" onclick="ProgABC_OpenGlossar('Boolean')">Boolean</span>.</p>
+<p>Beispiel:</p>
+<div class="code">a = 2&lt;5;
+output(a);
+</div>
+
+<h1>Logische Operatoren</h1>
+<h2>&Uuml;berleitung</h2>
+<p>Nachdem du nun die Vergleichsoperatoren kennen gelernt hast, wenden wir uns den <span class="glossar" onclick="ProgABC_OpenGlossar('logOperator')">logischen Operatoren</span> zu. Du wirst hier die drei wichtigsten logischen Operatoren kennen lernen:</p>
+<table>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>AND</td>
+<td><a href="Bool_6.html"><img src="../graf/nextlink.png" alt="next" /></a></td>
+</tr>
+<tr>
+<td><code>||</code></td>
+<td>OR</td>
+<td><a href="Bool_7.html"><img src="../graf/nextlink.png" alt="next" /></a></td>
+</tr>
+<tr>
+<td><code>!</code></td>
+<td>NOT</td>
+<td><a href="Bool_8.html"><img src="../graf/nextlink.png" alt="next" /></a></td>
+</tr>
+</table>
+<p>Logische Operatoren rechnen mit den Werten <code>true</code> und <code>false</code>. Das Resultat ist wieder entweder <code>true</code> oder <code>false</code>.</p>
+
+<h2>AND &amp;&amp;</h2>
+<p>Der AND-Operator funktioniert wie folgt:</p>
+<table>
+<tr>
+<th>a</th>
+<th>b</th>
+<th>a &amp;&amp; b</th>
+</tr>
+<tr>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>false</td>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>true</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+</tr>
+</table>
+<p>(a &amp;&amp; b) ist nur dann <code>true</code>, wenn a <i>und</i> b <code>true</code> sind.</p>
+<div class="code">a=2;
+b=3;
+c=4;
+d = (a&lt;=b); //true
+e = (b&lt;=c); //true
+output(d &amp;&amp; e); //true
+</div>
+
+<h2>OR ||</h2>
+<p>Der OR-Operator funktioniert wie folgt:</p>
+<table>
+<tr>
+<th>a</th>
+<th>b</th>
+<th>a || b</th>
+</tr>
+<tr>
+<td>false</td>
+<td>false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>false</td>
+<td>true</td>
+<td>true</td>
+</tr>
+<tr>
+<td>true</td>
+<td>false</td>
+<td>true</td>
+</tr>
+<tr>
+<td>true</td>
+<td>true</td>
+<td>true</td>
+</tr>
+</table>
+<p>(a || b) ist immer dann <code>true</code>, wenn a <i>oder</i> b oder beide <code>true</code> sind.</p>
+<div class="code">a=2;
+b=3;
+c=4;
+d = (a&lt;=b); //true
+e = (b==c); //false
+output(d || e); //true
+</div>
+
+<h2>NOT !</h2>
+<p>Der NOT-Operator welchselt <code>true</code> in <code>false</code> und umgekehrt:</p>
+<table>
+<tr>
+<th>a</th>
+<th>!a</th>
+</tr>
+<tr>
+<td>true</td>
+<td>false</td>
+</tr>
+<tr>
+<td>false</td>
+<td>true</td>
+</tr>
+</table>
+</body>
+</html>

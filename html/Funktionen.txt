@@ -1,0 +1,89 @@
+Quiz
+
+1:
+Welche Funktionsdeklarationen sind korrekt?
+function sagHallo()
+{
+	output('Hallo!');
+}
+
+function sagHallo;
+{
+	output('Hallo!');
+}
+
+function sag Hallo()
+{
+	output('Hallo');
+}
+
+function sagHallo{}
+(
+	output('Hallo');
+)
+
+function sag(text)
+{
+	output(text);
+}
+
+2:
+Gib die Reihenfolge an, wie der Interpreter das folgende Programm abarbeitet.
+function getName()
+{
+    output('Bitte gib deinen Namen ein:');
+    name=prompt();
+}
+getName();
+output('Hallo '+name);
+
+3:
+Warum zeigt die folgende Funktion den Text 'Funktionsende' nie an?
+function sagHallo()
+{
+	output('Hallo');
+	return 'Hallo';
+	output('Funktionsende');
+}
+Weil output() in einer Funktion nicht verwendet werden kann.
+Weil der Funktionsname 'sagHallo' lautet.
+Weil die Funktion nach return beendet wird.
+
+4:
+Warum wird im folgenden Programm nichts ausgegeben? Was musst du verbessern?
+function initialisiereVariablen()
+{
+	var begruessung = 'Hallo ';
+	var fehler = 'Ein Fehler ist aufgetreten!';
+}
+
+initialisiereVariablen();
+name=prompt('Wie heisst du?','Name');
+output(begruessung+name);
+
+Weil die Funktion am falschen Ort definiert ist. Sie sollte nach dem Hauptprogramm stehen.
+Weil die Variable begruessung lokal definiert ist. Die Zeile muss begrussung = 'Hallo '; heissen.
+Weil in der Funktion keine Variable zur&uuml;ckgegeben wird. Die Zeile return begruessung; muss in die funktion eingef&uuml;gt werden.
+
+
+
+Aufgaben
+
+:
+(P **)
+Programmiere eine Funktion, die Divisionen durchf&uuml;hrt. Die Funktion muss aber mehr k&ouml;nnen, als die einfache Operation /:
+Sie muss &uuml;berpr&uuml;fen, ob nicht durch 0 geteilt wird.
+Sie gibt das Resultat in der Form a / b = x Rest y an.
+
+&Uuml;berlege dir gut, wie die Funktion reagieren soll, wenn sie eine Division durch Null entdeckt. Begr&uuml;nde deinen Entscheid.
+Schreibe die Funktion so um, dass du &uuml;ber einen dritten Parameter angeben kannst, ob das Resultat eine Zeichenkette der Form 'a / b = x Rest y' oder eine Dezimalzahl ist.
+Schreibe die Funktion so um, dass du &uuml;ber einen vierten Parameter angeben kannst, ob das Resultat mit return zur&uuml;ckgegeben oder direkt angezeigt wird.
+
+
+
+:
+(P ***)
+Programmiere eine Funktion, die dir mit Hilfe der vordefinierten Funktion Math.random() eine Zufallszahl zwischen 0 und 10 aus- oder zur&uuml;ckgibt.
+Schreibe die Funktion so um, dass du der Funktion &uuml;ber Parameter angeben kannst in welchem Bereich die Zufallszahl liegen soll.
+
+Hinweis: Im ProgrammierABC gibt es die Funktion ProgABC_Zufall(min, max). Diese Funktion solltest du hier aber nicht verwenden.

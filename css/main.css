@@ -1,0 +1,293 @@
+body {
+    margin: 0 0 0 0;
+    padding:0 0 0 0;
+    font-family:sans-serif;
+    font-size:10pt;
+    background-color:#FFFFFF;
+    color:#000033;
+}
+
+img {
+    border: 0px;
+}
+
+.printme {
+	text-align:right;
+}
+
+a:link {
+    color:#000088;
+    text-decoration:underline;
+}
+
+a:hover {
+    color:#000088;
+    text-decoration:none;
+    background-color:#9999FF;
+}
+
+th {
+    color:#000033;
+    text-align:left;
+}
+
+dt {
+	font-weight:bold;
+}
+
+.code {
+    font-family:monospace;
+    font-size:10pt;
+    color:#000000;
+    white-space:pre;
+    background-color:#EFEFFF;
+    padding:0px 10px 0px 20px;
+    margin:10px 40px 20px 20px;
+    border:1px dashed #D0D0FF;
+}
+
+.wrongcode {
+    font-family:monospace;
+    font-size:10pt;
+    color:#330000;
+    white-space:pre;
+    background-color:#FFEFEF;
+    padding:10px 10px 0px 20px;
+    margin:20px 40px 20px 20px;
+    border:1px dashed #FFD0D0;
+}
+
+
+.achtung {
+    font-family:sans-serif;
+    font-size:10pt;
+    color:#000000;
+    background:#FFFFCC url(../graf/attention.png) center left no-repeat;
+    padding:0px 10px 0px 20px;
+    margin:20px 40px 20px 20px;
+}
+
+.intlink {
+    background: url(../graf/intlink.gif) center right no-repeat;
+    padding-right: 14px;
+}
+
+.nextlink {
+    background: url(../graf/nextlink.png) center right no-repeat;
+    padding-right: 14px;
+}
+
+.glossar {
+    font-family:sans-serif;
+    font-size:10pt;
+    background-color:#FFFFFF;
+    color:#000033;
+    font-style:italic;
+    background: url(../graf/glossarlink.gif) center right no-repeat;
+    padding-right: 14px;
+    cursor:pointer;
+}
+
+
+#infobtn {
+    position:absolute;
+    top:10px; right:300px;
+    visibility:hidden;
+    cursor:pointer;
+}
+
+#info {
+    position:fixed;
+    top:80px; right:360px;
+    width:50%;
+    z-index:3;
+    background-color:#333333;
+    opacity:1;
+    border-width:2px; border-color:#FFFFFF; border-style: double;
+    visibility:hidden;
+    color:#FFFFFF;
+    padding: 10px 10px 10px 10px;
+}
+
+#info .glossar {
+    color:#FFFFFF;
+}
+
+#info a:link {
+    color:#FFFFFF;
+    text-decoration:underline;    
+}
+
+#info a:hover {
+    color:#FFFFFF;
+    text-decoration:underline;
+    background-color:#444444;    
+}
+
+#info a:visited {
+    color:#FFFFFF;
+    text-decoration:underline;    
+}
+
+#info .code {
+    background-color:#AAAAAA;
+}
+
+
+#closeinfobtn, #closequestbtn, #closecodelabbtn {
+    position:absolute;
+    top:-7px; right:-7px;
+    color:#FFFFFF;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+#closeinfo:hover, #closequest:hover {
+    color:#FFFFFF;
+    text-decoration:none;
+    background-color:#9999FF;
+}
+
+#questbtn {
+    position:absolute;
+    top:10px; right:160px;
+    visibility:hidden;
+    cursor:pointer;
+}
+
+#quest{
+    position:fixed;
+    top:80px; right:220px;
+    width:50%;
+    z-index:3;
+    background-color:#333333;
+    opacity:1;
+    border-width:2px; border-color:#FFFFFF; border-style: double;
+    visibility:hidden;
+    color:#FFFFFF;
+    padding: 10px 10px 10px 10px;
+}
+
+#quest a:link {
+    color:#FFFFFF;
+    text-decoration:underline;    
+}
+
+#quest a:hover {
+    color:#FFFFFF;
+    text-decoration:underline;
+    background-color:#444444;    
+}
+
+#quest a:visited {
+    color:#FFFFFF;
+    text-decoration:underline;    
+}
+
+#quest .code {
+    background-color:#AAAAAA;
+}
+
+
+#codelabbtn {
+    position:absolute;
+    top:10px; right:20px;
+    visibility:hidden;
+    cursor:pointer;
+}
+
+#logo {
+    position:fixed;
+    top:0px; left:0px;
+    width: 392px; height:134px;
+    background-color:#FFFFFF;
+    z-index:2;
+    background-image:url(../graf/bcklogo.gif);
+    cursor:pointer;
+}
+
+#navitop{
+    position:fixed;
+    top:0px; left:392px; right:0px;
+    height:102px;
+    background-color:#CCCCCC;
+    text-align:right;
+    z-index:1;
+}
+
+#adminbuttons{
+    position:fixed;
+    top:102px; left:393px; right:152px;
+    height:22px;
+    background-color:#FFFFFF;
+    z-index:1;
+    text-align:right;
+    padding-top: 6px;
+}
+
+#navileft{
+    position:fixed;
+    top: 134px; bottom:0px; left:0px;
+    width:115px; 
+    background-color:#CCCCCC;
+    z-index:1;
+    text-align:left;
+    vertical-align:bottom;
+}
+
+#naviright{
+    position:fixed;
+    top:102px; right:0px; bottom: 71px;
+    width:151px;
+    background-color:#000000;
+    background-image:url(../graf/bckright.gif); background-repeat:repeat-y;
+    z-index:1;
+    text-align:right;
+    vertical-align:middle;
+}
+
+#inhalte{
+    position:absolute;
+    top:135px; bottom:71px; left:115px; right:121px;
+    background-color:#FFFFFF;
+    z-index:0;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 80px;
+}
+
+#navibottom{
+    position:fixed;
+    bottom:0px; left:115px; right:0px;
+    height:71px;
+    background-color:#DDDDDD;
+    background-image:url(../graf/bckbottom.gif); background-repeat:repeat-x;
+    z-index:2;
+    padding-top: 00px;
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    text-align:left;
+}
+
+#rightnavibtn{
+    position:absolute;
+    bottom:0px; right:0px;
+}
+
+#leftnavibtn{
+    position:absolute;
+    bottom:71px; left:0px;
+}
+
+#layout2 {
+    position:absolute;
+    top:0px; left:0px;
+    z-index:1;
+}
+#layout {
+    position:absolute;
+    top:0px; right:0px;
+    z-index:1;
+}

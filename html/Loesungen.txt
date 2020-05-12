@@ -1,0 +1,13 @@
+############################
+Operationen Aufgabe_2
+
+output('Zahl eingeben:');z = input();output('% einegeben:');p = input();r = z/100*p;output(p+'% von '+z+' sind '+r);output('Zahl eingeben:');z = input();output('Wert eingeben:');t = input();r = 100/z*t;output(t+' sind '+r+'% von '+z);
+
+
+
+
+
+############################
+Operationen Aufgabe_3
+
+output('Dividend eingeben:');a = input();output('Divisor eingeben:');b = input();rest = a%b;c = a-rest;q = c/b;output(a+' / '+b+' = '+q+' Rest '+rest);

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_UIinit();
+        document.getElementById('infobtn').style.visibility='hidden';
+        document.getElementById('questbtn').style.visibility='hidden';
+        document.getElementById('codelabbtn').style.visibility='visible';
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+}
+</script>
+</head>
+<body>
+<div id="logo">
+</div>
+<div id="navitop">
+<span id="infobtn">
+<img src="../graf/btninfo.gif" width="80" height="80" alt="goto info" />
+</span>
+<span id="questbtn">
+<img src="../graf/btnquest.gif" width="80" height="80" alt="goto quest" />
+</span>
+<span id="codelabbtn">
+<img src="../graf/btncodelab.gif" width="80" height="80" alt="goto codelab" />
+</span>
+</div>
+
+<div id="naviright">
+<img src="../graf/bckrighttop.gif" width="151" height="34" alt="layoutbild" />
+<span id="rightnavibtn">
+<a href="ende.html"><img src="../graf/btnlast.gif" width="100" height="50" alt="Index" /></a><br />
+<a href="Funktionen_5.html"><img src="../graf/btnnext.gif" width="100" height="50" alt="Vorw&auml;rts" /></a><br />
+</span>
+</div>
+
+<div id="navileft">
+<span id="leftnavibtn">
+<a href="Schleifen_1.html"><img src="../graf/btnfirst.gif" width="100" height="50" alt="Schleifen" /></a><br />
+<a href="Funktionen_3.html"><img src="../graf/btnprev.gif" width="100" height="50" alt="Zur&uuml;ck" /></a><br />
+</span>
+</div>
+
+<div id="inhalte">
+<h2>Funktionen mit Parametern</h2>
+<p>Manchmal ist es n&ouml;tig, der Funktion bestimmte Daten zu &uuml;bergeben. Diese k&ouml;nnen in den Klammern nach dem Funktionsnamen angegeben werden:</p>
+<div class="code">function meineFunktion(bar)
+{
+    //Anweisungen verwenden die Variable
+    bar
+}
+</div>
+<p>Um eine Funktion mit Parametern aufzurufen, m&uuml;ssen diese Parameter beim Aufruf mit einem Wert gef&uuml;llt werden.<br />
+Beispiel:</p>
+<div class="code">getName('Bitte Name eingeben:');
+output('Hallo '+name);
+
+function getName(text)
+{
+    name=prompt(text);
+}
+</div>
+<p>Es k&ouml;nnen auch mehrere Parameter &uuml;bergeben werden. Dies werden durch Kommas getrennt.<br />
+Beispiel:</p>
+<div class="code">getName('Bitte Name eingeben:','Name');
+output('Hallo '+name);
+
+function getName(text,def)
+{
+    name=prompt(text,def);
+}
+</div>
+
+</div>
+
+<div id="info">
+<img src="../graf/closebox.png" id="closeinfobtn" width="20px" height="20px" alt="close" />
+</div>
+
+<div id="quest">
+<img src="../graf/closebox.png" id="closequestbtn" width="20px" height="20px" alt="close" />
+
+</div>
+
+<div id="codelabtext" style="display:none">getName('Bitte Name eingeben:','Name');
+output('Hallo '+name);
+
+function getName(text,def)
+{
+    name=prompt(text,def);
+}</div>
+
+
+<div id="navibottom">
+<img id="layout2" src="../graf/bckbottomleft.gif" width="11" height="71" alt="layoutbild" />
+<img id="layout" src="../graf/bckbottomright.gif" width="151" height="71" alt="layoutbild"/><br />
+Pfad:&nbsp;&nbsp;<a href="toc.html">Inhalte</a>&nbsp;/&nbsp;<a href="Funktionen_1.html">Funktionen</a>&nbsp;/&nbsp;Seite 4<br />
+Seite:&nbsp;<a href="Funktionen_1.html">1</a>&nbsp;<a href="Funktionen_2.html">2</a>&nbsp;<a href="Funktionen_3.html">3</a>&nbsp;4&nbsp;<a href="Funktionen_5.html">5</a>&nbsp;<a href="Funktionen_6.html">6</a>&nbsp;<a href="Funktionen_7.html">7</a>
+
+</body>
+</html>

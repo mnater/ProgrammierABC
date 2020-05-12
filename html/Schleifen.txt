@@ -1,0 +1,158 @@
+Schleifen
+
+1: Einleitung
+Computer sind unglaublich praktisch, wenn es darum geht, immer die gleiche Aufgabe xmal hintereinander zu wiederholen.
+Weil solche Aufgaben sehr oft programmiert werden, gibt es daf&uuml;r besondere Kontrollstrukturen, sogenannte Schleifen.
+
+In diesem Kapitel lernst du die drei Kontrollstrukturen "while", "do while" und "for" kennen.
+Du lernst auch, warum Endlosschleifen deinen Computer blockieren und wie du damit umgehen kannst.
+
+2: Allgemeiner Aufbau von Schleifen
+Jede Schleife ist nach dem selben Grundprinzip aufgebaut:
+Sie wiederholt einen Codeblock (den "Schleifenk&ouml;rper") solange, wie eine bestimmte Bedingung erf&uuml;llt ist.
+
+Im Kapitel "Programmieren" hast du bereits eine solche "Schleife" kennengelernt:
+<div class="code">1:  Anfang
+2:  Orange nehmen
+3:  Schalenst&uuml;ck abreissen
+4:  3 wiederholen, solange noch Schale vorhanden
+5:  Meldung: Orange gesch&auml;lt.
+6:  Ende
+</div>
+Zeile 4 beschreibt eine Schleife mit der Bedingung "solange noch Schale vorhanden" und dem Schleifenk&ouml;rper "Schalenst&uuml;ck abreissen".
+
+Aufgabe:
+Im t&auml;glichen Leben treffen wir sehr oft auf Schleifen:
+"Essen, solange ich Hunger habe"
+"H&auml;nde waschen, bis sie sauber sind"
+Suche eigene Schleifen aus dem Leben. Bestimme die Bedingung und den Schleifenk&ouml;rper.
+
+3: while
+Die while-Schleife f&uuml;hrt den Schleifenk&ouml;rper solange aus, wie die Bedingung erf&uuml;llt ist.
+
+Code:
+i=0;
+while(i<2)
+{
+	i=++;
+	output(i);
+}
+output('Ende');
+
+Die Bedingung wird zwischen Klammern gleich nach dem Schl&uuml;sselwort while geschrieben. Der Schleifenk&ouml;rper wird danach zwischen zwei geschwungenen Klammern notiert.
+
+Das Programm arbeitet wie folgt:
+1. Es speichert den Wert 0 in der Variable i.
+2. Es &uuml;berpr&uuml;ft die Bedingung der while-Schleife. 0 ist kleiner als 3, also wird der Schleifenk&ouml;rper ausgef&uuml;hrt.
+3. Es erh&ouml;ht den Wert der Variable i um 1.
+4. Gibt den Wert von i (im Moment 1) aus. Der Schleifenk&ouml;rper ist hier zu Ende.
+5. Das Programm &uuml;berpr&uuml;ft erneut die Bedingung. 1 ist kleiner als 3, also geht es wieder in der Schleife weiter. i wird um 1 erh&ouml;ht und ausgegeben (2).
+6. Nun wird wieder die Bedingung &uuml;berpr&uuml;ft. 2 ist nicht kleiner als 2, der Schleifenk&ouml;rper wird also nicht ausgef&uuml;hrt.
+7. Das Programm gibt 'Ende' aus.
+
+Achtung:
+Um Fehler zu vermeiden, sollten alle Variablen, die in der Schleifenbedingung vorkommen, klar definiert sein.
+Ist die Bedingung von Anfang an nicht erf&uuml;llt, wird der Schleifenk&ouml;rper nie ausgef&uuml;hrt.
+
+4: do while
+Die do-while-Schleife funktioniert genau so wie die while-Schleife, mit dem einzigen Unterschied, dass sie die Bedingung nach der Ausf&uuml;hrung des Schleifenk&ouml;rpers &uuml;berpr&uuml;ft.
+
+Code:
+i=0;
+do {
+	i++;
+	output(i);
+} while(i<2);
+output('Ende');
+
+Der Schleifenk&ouml;rper wird zwischen geschweiften Klammern gleich nach dem Schl&uuml;sselwort do geschrieben. Darauf folgt das Schl&uuml;sselwort while mit der Bedingung in Klammern. Die ganze Struktur muss mit einem Strichpunkt abgeschlossen werden.
+
+Aufgabe:
+&uuml;berlege dir Schritt f&uuml;r Schritt, was das Programm macht und schreibe es auf.
+
+5: for
+Eine besondere Schleife ist die for-Schleife. Sie &uuml;berpr&uuml;ft nicht nur vor jedem Durchgang eine Bedingung, sondern &auml;ndert auch jedesmal den Wert eines Z&auml;hlers.
+
+Code:
+for(i=0; i<2; i++;)
+{
+	output(i);
+}
+output('Ende');
+
+In der Klammer nach dem Schl&uuml;sselwort for m&uuml;ssen drei Anweisungen gemacht werden:
+1. Initialisierung der Z&auml;hlervariable
+Es ist &uuml;blich als Variablennamen f&uuml;r Z&auml;hler 'i' zu verwenden. Der Wert der der Z&auml;hlervariable zugewiesen wird, gilt f&uuml;r den ersten Durchgang.
+2. Die Bedingung
+Normalerweise enth&auml;lt die Bedingung die Z&auml;hlervariable (i). Die Schleife wird solange ausgef&uuml;hrt, wie die Bedinung erf&uuml;llt ist.
+3. Eine &auml;nderungsoperation f&uuml;r die Z&auml;hlervariable.
+Meistens muss die Variable um 1 erh&ouml;ht werden.
+
+Aufgabe:
+&uuml;berlege dir Schritt f&uuml;r Schritt, was das Programm macht und schreibe es auf.
+
+6: Endlosschleifen
+Wenn in einer Schleife die Bedingung auf jeden Fall immer erf&uuml;llt ist, spricht man von einer Endlosschleife. Ger&auml;t ein Programm in eine Endlosschleife, kann es nicht mehr gestoppt werden und bringt im schlimmsten Fall den Computer zum Absturz.
+Endlosschleifen entstehen, wenn man nicht versteht, was die Schleife genau macht oder wenn die Bedingung nicht genau durchdacht ist.
+
+Endlosschleifen im CodeLab haben je nach verwendetem Browser unterschiedlich schwerwiegende Auswirkungen.
+Unter Umst&auml;nden reagiert der Browser nicht mehr und "friert ein". In diesem Fall muss das Programm &uuml;ber Apfel-Alt-Esc (bei Mac OS X) oder &uuml;ber Ctrl-Alt-Delete (bei Windows) beendet werden.
+
+Schleifen Quiz
+
+Erg&auml;nze!
+Eine while-Schleife wird ausgef&uuml;hrt...
+... bis die Bedingung erf&uuml;llt ist.
+... solange die Bedingung erf&uuml;llt ist.
+... sobald die Bedingung erf&uuml;llt ist.
+
+Das Programm sollte alle Zahlen von 10 bis 0 ausgeben.
+Wo liegt der Fehler?
+i=11;
+do {
+	i--;
+	output(i);
+} while(i<0);
+output('Ende');
+
+
+
+
+Schleifen Aufgaben
+
+Vergleiche die beiden Programme (while-Schleife und do-while-Schleife). Warum sind die Ausgaben verschieden? Bedingung und Schleifenk&ouml;rper sind doch gleich!
+
+Schreibe ein kleines Programm, dass alle Zahlen von 1 bis 10 ausgibt, jeweils mit einer while-, einer do-while- und mit einer for-Schleife.
+Welcher Schleifentyp ist am besten daf&uuml;r geeignet?
+
+&auml;ndere das Programm so, dass es die Zahlen umgekehrt, also von 10 bis 1 ausgibt.
+
+&auml;ndere den Zahlenbereich (1 bis 1000, 1 bis 1'000'000 usw). Kannst du Geschwindigkeitsunterschiede feststellen?
+
+Halte deine Ergebnisse im Journal fest!
+
+
+Programmiere ein kleines Spiel:
+Der Computer w&auml;hlt zuf&auml;llig eine Zahl zwischen 0 und 100. Der Benutzer soll diese Zahl erraten. Dazu gibt er eine Zahl ein und der Computer gibt an, ob die gesuchte Zahl gr&ouml;sser oder kleiner ist, solange bis die eingegebene Zahl der gesuchten entspricht.
+
+Mit der Funktion ProgABC_Zufall(0,100) erh&auml;lst du eine zuf&auml;llige Zahl zwischen 0 und 100.
+
+Erweitere das Programm so, dass es am Schluss angibt, wieviele Versuche n&ouml;tig waren.
+
+Halte deine Ergebnisse im Journal fest!
+
+
+
+Programmiere ein kleines Programm, dass dir mit Hilfe von Buchstaben grafische Muster am Bildschirm ausgibt. Beispiele:
+
+
+X         XXXX
+XX        XXX         X
+XXX       XX         XXX
+XXXX      X         XXXXX
+XXXXX              XXXXXXX
+
+
+
+
+

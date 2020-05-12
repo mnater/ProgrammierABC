@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_UIinit();
+        document.getElementById('infobtn').style.visibility='hidden';
+        document.getElementById('questbtn').style.visibility='hidden';
+        document.getElementById('codelabbtn').style.visibility='hidden';
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+}
+</script>
+</head>
+<body>
+<div id="logo">
+</div>
+<div id="navitop">
+<span id="infobtn">
+<img src="../graf/btninfo.gif" width="80" height="80" alt="goto info" />
+</span>
+<span id="questbtn">
+<img src="../graf/btnquest.gif" width="80" height="80" alt="goto quest" />
+</span>
+<span id="codelabbtn">
+<img src="../graf/btncodelab.gif" width="80" height="80" alt="goto codelab" />
+</span>
+</div>
+
+<div id="naviright">
+<img src="../graf/bckrighttop.gif" width="151" height="34" alt="layoutbild" />
+<span id="rightnavibtn">
+<a href="zielgruppe.html"><img src="../graf/btnnext.gif" width="100" height="50" alt="Vorw&auml;rts" /></a><br />
+</span>
+</div>
+
+<div id="navileft">
+<span id="leftnavibtn">
+<a href="index.html"><img src="../graf/btnprev.gif" width="100" height="50" alt="Zur&uuml;ck" /></a><br />
+</span>
+</div>
+
+<div id="inhalte">
+<h2 style="background-color:#E68512;">Lernziele f&uuml;r Lernerinnen und Lernen</h2>
+Am Schluss dieses Kurses kannst du...
+<ul style="list-style-image:url(../graf/ldots.gif)">
+<li>die wichtigsten Elemente einer Programmiersprache anwenden.</li>
+<li>eigene Programme schreiben, die dir bei der L&ouml;sung von mathematischen Problemen helfen.</li>
+<li>eigene kleine Games programmieren.</li>
+</ul>
+<h3>Hinweise f&uuml;r Lehrpersonen und Eltern</h3>
+<p>In den meisten deutschschweizer Lehrpl&auml;nen f&uuml;r die Sekundarstufe I ist Programmieren/Algorithmik <em>nicht</em> enthalten. Dies war nicht immer so. In den &auml;lteren Lehrpl&auml;nen war dies sehr wohl ein Thema. Heute haben sich die Inhalte des IKT-Unterrichts aber mehr in Richtung Medienkompetenz verschoben.</p>
+<p><em>Wieso sollen also die Sch&uuml;lerinnen und Sch&uuml;ler programmieren lernen?</em></p>
+<ul>
+<li>Das Vorwissen der Sch&uuml;lerinnen und Sch&uuml;ler ist vor allem im Bereich Computeranwendung sehr heterogen. Statt fortgeschrittene Sch&uuml;lerinnen und Sch&uuml;ler mit einer Einf&uuml;hrung in ein bestimmtes Thema, das sie nachgewiesenerweise bereits beherrschen, zu langweilen, k&ouml;nnen sie im Rahmen einer individualisierten Unterrichtsform selbst&auml;ndig programmieren lernen.</li>
+<li>Eine InformatikerInnen-Lehre ist bei vielen Sch&uuml;lerinnen und Sch&uuml;ler sehr begehrt. Viele wissen aber nicht genau, worum es beim Programmieren geht. Hier k&ouml;nnen sie einen Einblick in einen (wichtigen) Teilbereich der Arbeit eines Informatikers gewinnen.</li>
+<li>"Probleml&ouml;sen" und "Probleml&ouml;severfahren" sind F&auml;higkeiten die in allen Lehrpl&auml;nen im Zentrum stehen. Programmieren trainiert die F&auml;higkeit, Probleme zu abstrahieren und in kleinere, l&ouml;sbare Teilprobleme zu gliedern.</li>
+</ul>
+</div>
+
+<div id="info">
+<img src="../graf/closebox.png" id="closeinfobtn" width="20px" height="20px" alt="close" />
+</div>
+
+<div id="quest">
+<img src="../graf/closebox.png" id="closequestbtn" width="20px" height="20px" alt="close" />
+
+</div>
+
+
+
+<div id="navibottom">
+<img id="layout2" src="../graf/bckbottomleft.gif" width="11" height="71" alt="layoutbild" />
+<img id="layout" src="../graf/bckbottomright.gif" width="151" height="71" alt="layoutbild"/><br />
+Pfad:&nbsp;&nbsp;<a href="index.html">ProgrammierABC</a>&nbsp;/&nbsp;Ziele
+</div>
+
+</body>
+</html>

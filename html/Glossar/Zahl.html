@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>Glossar</title>
+<link href="../../css/glossar.css" type="text/css" rel="stylesheet"/>
+<link href="../../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+<script type="text/javascript">
+window.onload = function init() {
+ProgABC_highlightCode();
+}
+</script>
+</head>
+<body>
+<dl>
+<dt>Datentyp: Zahl (number)</dt>
+<dd>Ein Wert vom Datentyp "Zahl" kann eine beliebige Zahl (positiv oder negativ, mit oder ohne Kommastellen) sein.<br />
+Je nach vorhandener Hardware sind die gr&ouml;sste und kleinste erlaubte Zahl verschieden. Auf diesem System gelten folgende Grenzwerte:<br />
+Gr&ouml;sste speicherbare Zahl: <script type="text/javascript">
+document.writeln(Number.MAX_VALUE);
+</script><br />
+Kleinste (positive) erlaubte Zahl: <script type="text/javascript">
+document.writeln(Number.MIN_VALUE);
+</script></dd>
+</dl>
+</body>
+</html>

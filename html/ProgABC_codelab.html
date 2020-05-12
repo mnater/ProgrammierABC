@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/ProgABC_codelabstyle.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_CodeLab.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_setCLDefaultTextTo(document.location.search.substring(1));
+        ProgABC_codelabinit();
+        ProgABC_showhighlight();
+        ProgABC_fade('codelab', 0, 1);
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+}
+</script>
+</head>
+<body>
+<div id="codelab">
+    <div id="CL_formView">
+    <form id="CL_codeform" action="" method="post">
+    <textarea id="CL_code" rows="0" cols="0"> </textarea>
+    <span id="CL_hlbtns">
+    <button id="CL_runB" type="button">Ausf&uuml;hren!</button>&nbsp;
+    <button id="CL_testB" type="button">Einf&auml;rben!</button>
+    </span>
+    </form>
+    </div>
+    
+    <div id="CL_paragraphView">
+    <iframe src="ProgABC_hlcodeframe.html" id="CL_hlcode" name="CL_hlcodeframe" width="100%" height="100%" frameborder="0"></iframe>
+    <span id="CL_hlbtns">
+    <button id="CL_runB2" type="button">Ausf&uuml;hren!</button>&nbsp;
+    <button id="CL_editB" type="button">&Auml;ndern!</button>
+    </span>
+    </div>
+    
+    <iframe src="ProgABC_outputframe.html" id="CL_output" name="CL_outputframe" frameborder="0"></iframe>
+</div>
+</body>
+</html>

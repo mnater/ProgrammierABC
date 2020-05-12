@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_UIinit();
+        document.getElementById('infobtn').style.visibility='hidden';
+        document.getElementById('questbtn').style.visibility='hidden';
+        document.getElementById('codelabbtn').style.visibility='hidden';
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+}
+</script>
+</head>
+<body>
+<div id="logo">
+</div>
+<div id="navitop">
+<span id="infobtn">
+<img src="../graf/btninfo.gif" width="80" height="80" alt="goto info" />
+</span>
+<span id="questbtn">
+<img src="../graf/btnquest.gif" width="80" height="80" alt="goto quest" />
+</span>
+<span id="codelabbtn">
+<img src="../graf/btncodelab.gif" width="80" height="80" alt="goto codelab" />
+</span>
+</div>
+
+<div id="naviright">
+<img src="../graf/bckrighttop.gif" width="151" height="34" alt="layoutbild" />
+<span id="rightnavibtn">
+<a href="Programm_1.html" title="N&auml;chstes Kapitel" rel="chapter"><img src="../graf/btnlast.gif" width="100" height="50" alt="Schluss" /></a><br />
+<a href="Einstieg_5.html" title="N&auml;chste Seite" rel="next"><img src="../graf/btnnext.gif" width="100" height="50" alt="Vorw&auml;rts" /></a><br />
+</span>
+</div>
+
+<div id="navileft">
+<span id="leftnavibtn">
+<a href="index.html" title="Zum Anfang" rel="first"><img src="../graf/btnfirst.gif" width="100" height="50" alt="Anfang" /></a><br />
+<a href="Einstieg_3.html" title="Vorhergehende Seite" rel="prev"><img src="../graf/btnprev.gif" width="100" height="50" alt="Zur&uuml;ck" /></a><br />
+</span>
+</div>
+
+<div id="inhalte">
+<h2>Lernaufgaben</h2>
+<p>
+Die Lernaufgaben sollen dir helfen, den Stoff besser zu behalten; denn wenn du alles nur liest, hast du es morgen wieder vergessen!<br />
+Du musst aber nicht alle Lernaufgaben l&ouml;sen. W&auml;hle die Aufgaben aus, die dich am meisten interessieren.</p>
+<p>Es gibt verschiedene Arten von Aufgaben:</p>
+<dl>
+<dt>G</dt>
+<dd>Gruppenaufgabe: Diese Aufgabe musst du mit einer anderen Person zusammen bearbeiten.</dd>
+<dt>P</dt>
+<dd>Programmieraufgabe: Hier musst du etwas programmieren</dd>
+<dt>*</dt>
+<dd>Einfache Aufgabe</dd>
+<dt>**</dt>
+<dd>Schwierige Aufgabe</dd>
+<dt>***</dt>
+<dd>Sehr schwierige Aufgabe</dd>
+</dl>
+<p>Die Kategorien k&ouml;nnen auch kombiniert werden.
+</p>
+</div>
+
+<div id="info">
+<img src="../graf/closebox.png" id="closeinfobtn" width="20px" height="20px" alt="close" />
+</div>
+
+<div id="quest">
+<img src="../graf/closebox.png" id="closequestbtn" width="20px" height="20px" alt="close" />
+</div>
+
+
+
+<div id="navibottom">
+<img id="layout2" src="../graf/bckbottomleft.gif" width="11" height="71" alt="layoutbild" />
+<img id="layout" src="../graf/bckbottomright.gif" width="151" height="71" alt="layoutbild"/><br />
+Pfad:&nbsp;&nbsp;<a href="toc.html">Inhalte</a>&nbsp;/&nbsp;<a href="Einstieg_1.html">Einstieg</a>&nbsp;/&nbsp;Seite 4<br />
+Seite:&nbsp;<a href="Einstieg_1.html">1</a>&nbsp;<a href="Einstieg_2.html">2</a>&nbsp;<a href="Einstieg_3.html">3</a>&nbsp;4&nbsp;<a href="Einstieg_5.html">5</a>&nbsp;<a href="Einstieg_6.html">6</a>
+</div>
+
+</body>
+</html>

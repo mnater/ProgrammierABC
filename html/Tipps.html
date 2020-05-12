@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/print.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_highlightCode();
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+    window.print();
+}
+</script>
+</head>
+<body>
+
+<h1 style="background-color:#637BA9;">Programmiertipps</h1>
+<h2>Einleitung</h2>
+<p>In diesem Kapitel lernst du einige Tipps kennen, die dir beim Programmieren helfen werden.</p>
+<p>Inhalt:<br />
+<a href="Tipps_2.html" class="nextlink">Kommentare in Programmen</a><br />
+<a href="Tipps_4.html" class="nextlink">Auskommentieren</a><br />
+<a href="Tipps_5.html" class="nextlink">Klammern und Anf&uuml;hrungszeichen</a><br />
+<a href="Tipps_6.html" class="nextlink">Einr&uuml;cken</a><br />
+<a href="Tipps_7.html" class="nextlink">Aussagekr&auml;ftige Namen</a><br />
+</p>
+
+
+<h2>Kommentare in Programmen</h2>
+<p>Wenn du selbst Programme schreibst, solltest du bei komplizierten Befehlen erkl&auml;ren, was sie genau tun. Am besten schreibt man einen kleinen Kommentar dazu.<br />
+Kommentare sind kurze Texte im Code, die nicht interpretiert werden.
+Einzeilige Kommentare schreibt man so:</p>
+<div class="code">//Dies ist ein kurzer Kommentar.
+</div>
+<p>Ein Kommentar &uuml;ber mehrere Zeilen kann mit <code>/*</code> begonnen und mit <code>*/</code> beendet werden.</p>
+<div class="code">/* Dies ist ein Kommentar
+ * der &uuml;ber mehrere Zeilen
+ * geht.
+ */
+</div>
+
+
+<h2>Sinnvolle Kommentare schreiben</h2>
+<p>Kommentare sollen helfen, das Programm zu verstehen. Dabei sollte man ein paar Grunds&auml;tze befolgen:</p>
+<ul>
+<li>Nicht das Offensichtliche wiederholen.
+<div class="wrongcode">pi = 3.14159265358979; //Die Zahl Pi
+</div>
+</li>
+<li>Sich m&ouml;glichst kurz halten.<br />
+Der Kommentar sollte viel k&uuml;rzer sein als der Code.</li>
+<li>Funktionen und globale Daten immer kommentieren.
+<div class="code">/* Gibt eine zuf&auml;llige ganze Zahl von 1 bis 10 zur&uuml;ck
+ *
+ * Es handelt sich um eine Pseudo-Zufallszahl
+ */
+function rand()
+{
+    var z=Math.random()*10;
+    z = Math.floor(z)+1;
+    return z;
+}
+</div>
+</li>
+</ul>
+
+<h2>Auskommentieren</h2>
+<p>Wenn dein Programm nicht richtig l&auml;uft, hilft es manchmal den Code als Kommentar zu markieren ("auskommentieren") und ihn dann wieder St&uuml;ck f&uuml;r St&uuml;ck zuzuschalten:<br />
+<img src="../img/auskommentieren.gif" width="427" height="229" alt="Animation zeigt das Konzept des Auskommentierens" /></p>
+
+<h2>Klammern und Anf&uuml;hrungszeichen</h2>
+<p>Bei vielen Anweisungen werden Klammern gesetzt. Immer wenn eine Klammer ge&ouml;ffnet wird, muss sie auch wieder geschlossen werden; sonst gibt es einen Syntaxfehler.
+Damit keine Klammern verlorengehen hilft es, wenn man immer gleich auch die schliessende Klammer setzt und dann den Text dazwischen einf&uuml;gt.</p>
+<p>F&uuml;r Anf&uuml;hrungszeichen gilt genau das selbe!<br />
+<img src="../img/klammer.gif" width="" height="" alt="Animation zeigt das effektive Schreiben von Klammern" /></p>
+
+<h2>Einr&uuml;cken</h2>
+<p>Code ist einfacher zu lesen, wenn l&auml;ngere zusammengeh&ouml;rende Codebl&ouml;cke einger&uuml;ckt und mit Zeilenabst&auml;nden getrennt werden.<br />
+Der Interpreter wertet die Einr&uuml;ckungen nicht aus.</p>
+
+<div class="code">//Berechnet alle Primzahlen von 2 bis max.
+i=0;
+j=0;
+n=2;
+prim=true;
+p=new Array(); //berechnete Primzahlen
+p[0]=2;
+max = 100; //obere Grenze
+
+for(n=2; n&lt;=max; n++) //n ist die untersuchte Zahl
+{
+    i=0;
+    prim=true;
+    //es m&uuml;ssen nur die Zahlen bis Wurzel(n) untersucht werden
+    while(p[i]*p[i]&lt;=n)
+    {
+        if(n%p[i]==0) //n ist teilbar durch eine andere Primzahl
+        {
+            prim = false;
+            break;
+        }
+        i++;
+    }
+    if(prim==true)
+    {
+        output(n);
+        p[j++]=n; //n zu den berechneten Primzahle hinzuf&uuml;gen
+    }
+}
+</div>
+<p>Das Einr&uuml;cken mit der Tabulatortaste funktioniert im CodeLab mit der Tastenkombination "Alt Tab".</p>
+
+<h2>Aussagekr&auml;ftige Namen</h2>
+<p>Die Namen von Variablen und Funktionen sollten m&ouml;glichst kurz, aber dennoch aussagekr&auml;ftig sein.</p>
+<p>Man hat sich auf gewisse Standards f&uuml;r selbstvergebene Namen geeinigt:</p>
+<ul>
+<li>Variablennamen werden klein geschrieben.
+<div class="code">pi
+name</div>
+</li>
+<li>Manchmal ist es f&uuml;r die Verst&auml;ndlichkeit gut, wenn auf den Datentyp hingewiesen wird (s=string, n=number, b=boolean etc.).
+<div class="code">pi_n
+name_s</div>
+</li>
+<li>Funktionsnamen beginnen mit einem kleinen Buchstaben, weitere W&ouml;rter werden gross geschrieben ("studlyCaps"). Sie sollten auch ein Verb enthalten, das umschreibt, wozu die Funktion im Endeffekt dient.
+<div class="code">getSum();
+displayResult();</div>
+</li>
+</ul>
+</body>
+</html>

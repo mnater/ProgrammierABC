@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_UIinit();
+        document.getElementById('infobtn').style.visibility='visible';
+        document.getElementById('questbtn').style.visibility='hidden';
+        document.getElementById('codelabbtn').style.visibility='hidden';
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+}
+</script>
+</head>
+<body>
+<div id="logo">
+</div>
+<div id="navitop">
+<span id="infobtn">
+<img src="../graf/btninfo.gif" width="80" height="80" alt="goto info" />
+</span>
+<span id="questbtn">
+<img src="../graf/btnquest.gif" width="80" height="80" alt="goto quest" />
+</span>
+<span id="codelabbtn">
+<img src="../graf/btncodelab.gif" width="80" height="80" alt="goto codelab" />
+</span>
+</div>
+
+<div id="naviright">
+<img src="../graf/bckrighttop.gif" width="151" height="34" alt="layoutbild" />
+<span id="rightnavibtn">
+<a href="toc.html" title="N&auml;chste Seite" rel="next"><img src="../graf/btnnext.gif" width="100" height="50" alt="N&auml;chste Seite" /></a><br />
+</span>
+</div>
+
+<div id="navileft">
+<span id="leftnavibtn">
+<a href="Tipps_6.html" title="Zum Anfang" rel="first"><img src="../graf/btnprev.gif" width="100" height="50" alt="Vorhergehende Seite" /></a>
+</span>
+</div>
+
+<div id="inhalte">
+<h2>Aussagekr&auml;ftige Namen</h2>
+<p>Die Namen von Variablen und Funktionen sollten m&ouml;glichst kurz, aber dennoch aussagekr&auml;ftig sein.</p>
+<p>Man hat sich auf gewisse Standards f&uuml;r selbstvergebene Namen geeinigt:</p>
+<ul>
+<li>Variablennamen werden klein geschrieben.
+<div class="code">pi
+name</div>
+</li>
+<li>Manchmal ist es f&uuml;r die Verst&auml;ndlichkeit gut, wenn auf den Datentyp hingewiesen wird (s=string, n=number, b=boolean etc.).
+<div class="code">pi_n
+name_s</div>
+</li>
+<li>Funktionsnamen beginnen mit einem kleinen Buchstaben, weitere W&ouml;rter werden gross geschrieben ("studlyCaps"). Sie sollten auch ein Verb enthalten, das umschreibt, wozu die Funktion im Endeffekt dient.
+<div class="code">getSum();
+displayResult();</div>
+</li>
+</ul>
+</div>
+
+<div id="info">
+<img src="../graf/closebox.png" id="closeinfobtn" width="20px" height="20px" alt="close" />Grunds&auml;tzlich ist es egal, ob man die Namen auf Deutsch, Englisch oder Finnisch schreibt. Man sollte sich aber auf eine Sprache beschr&auml;nken und nicht mischen!<br />
+Standardsprache f&uuml;r Programme ist jedoch Englisch. Im Englischen sind die Namen meist k&uuml;rzer und es gibt auch keine Probleme mit den Umlauten.
+</div>
+
+<div id="quest">
+<img src="../graf/closebox.png" id="closequestbtn" width="20px" height="20px" alt="close" />
+</div>
+
+<div id="codelabtext" style="display:none"> </div>
+
+
+<div id="navibottom">
+<img id="layout2" src="../graf/bckbottomleft.gif" width="11" height="71" alt="layoutbild" />
+<img id="layout" src="../graf/bckbottomright.gif" width="151" height="71" alt="layoutbild"/><br />
+Pfad:&nbsp;&nbsp;<a href="toc.html">Inhalte</a>&nbsp;/&nbsp;<a href="Tipps_1.html">Programmiertipps</a>&nbsp;/&nbsp;Seite 7<br />
+Seite:&nbsp;<a href="Tipps_1.html">1</a>&nbsp;<a href="Tipps_2.html">2</a>&nbsp;<a href="Tipps_3.html">3</a>&nbsp;<a href="Tipps_4.html">4</a>&nbsp;<a href="Tipps_5.html">5</a>&nbsp;<a href="Tipps_6.html">6</a>&nbsp;7
+</div>
+
+</body>
+</html>

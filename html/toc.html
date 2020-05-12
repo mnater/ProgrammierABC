@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet" />
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet" />
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        document.cookie = "Name=ProgABC;";
+        ProgABC_UIinit();
+        document.getElementById('infobtn').style.visibility='hidden';
+        document.getElementById('questbtn').style.visibility='hidden';
+        document.getElementById('codelabbtn').style.visibility='hidden';
+        document.getElementById('leftnavibtn').style.visibility='hidden';
+	  document.getElementById('rightnavibtn').style.visibility='hidden';
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+}
+
+function swapChapDesc(kapitel,elem)
+{
+    var mytr = document.getElementById(kapitel);
+    if(mytr.style.display=='none')
+    {
+        elem.firstChild.src='../graf/auf.png';
+        mytr.style.display='table-row';
+    }
+    else
+    {
+        elem.firstChild.src='../graf/zu.png';
+        mytr.style.display='none';
+    }
+
+}
+
+</script>
+</head>
+<body>
+<div id="logo">
+</div>
+<div id="navitop">
+<span id="infobtn">
+<img src="../graf/btninfo.gif" width="80" height="80" alt="goto info" />
+</span>
+<span id="questbtn">
+<img src="../graf/btnquest.gif" width="80" height="80" alt="goto quest" />
+</span>
+<span id="codelabbtn">
+<img src="../graf/btncodelab.gif" width="80" height="80" alt="goto codelab" />
+</span>
+</div>
+
+<div id="naviright">
+<img src="../graf/bckrighttop.gif" width="151" height="34" alt="layoutbild" />
+<span id="rightnavibtn">
+<a href=""><img src="../graf/btnlast.gif" width="100" height="50" alt="Schluss" /></a><br />
+<a href=""><img src="../graf/btnnext.gif" width="100" height="50" alt="Vorw&auml;rts" /></a><br />
+</span>
+</div>
+
+<div id="navileft">
+<span id="leftnavibtn">
+<a href=""><img src="../graf/btnfirst.gif" width="100" height="50" alt="Anfang" /></a><br />
+<a href=""><img src="../graf/btnprev.gif" width="100" height="50" alt="Zur&uuml;ck" /></a><br />
+</span>
+</div>
+
+<div id="inhalte">
+<h1>Inhaltsverzeichnis</h1>
+<table width="80%" border="0" cellpadding="2" cellspacing="1">
+<tr>
+    <th width="10px"></th>
+    <th width="40%">Kapitel</th>
+    <th width="20%">Quiz</th>
+    <th width="40%">&Uuml;bungen</th>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('Einstieg',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td style="background-color:#BFE2F8;"><a href="Einstieg_1.html" target="_self">Einstieg (6 Seiten)</a></td>
+    <td style="background-color:#BFE2F8;"><a href="Einstieg_Quiz_1.html" target="_self">3 Fragen</a></td>
+    <td style="background-color:#BFE2F8;">0 Aufgaben</td>
+</tr>
+<tr id="Einstieg" style="display:none;">
+    <td></td>
+    <td colspan="3">Hier lernst du die Funktionen des Lernprogramms kennen.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('Programm',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td style="background-color:#B9DAF2;"><a href="Programm_1.html" target="_self">Programmieren (8 Seiten)</a></td>
+    <td style="background-color:#B9DAF2;"><a href="Programm_Quiz_1.html" target="_self">2 Fragen</a></td>
+    <td style="background-color:#B9DAF2;">0 Aufgaben</td>
+</tr>
+<tr id="Programm" style="display:none;">
+    <td></td>
+    <td colspan="3">Hier erf&auml;hrst du, was <i>Programmieren</i> bedeutet und worum es dabei geht.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('Werte',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td style="background-color:#B0D1EB;"><a href="Werte_1.html" target="_self">Variablen und Werte (7 Seiten)</a></td>
+    <td style="background-color:#B0D1EB;"><a href="Werte_Quiz_1.html" target="_self">5 Fragen</a></td>
+    <td style="background-color:#B0D1EB;">0 Aufgaben</td>
+</tr>
+<tr id="Werte" style="display:none;">
+    <td></td>
+    <td colspan="3">Du lernst, wie du <i>Werte</i> eines bestimmten <i>Datentyps</i> in <i>Variablen</i> abspeichern kannst.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('IO',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td style="background-color:#A5C5E3;"><a href="IO_1.html" target="_self">Daten ein- und ausgeben (9 Seiten)</a></td>
+    <td style="background-color:#A5C5E3;"><a href="IO_Quiz_1.html" target="_self">4 Fragen</a></td>
+    <td style="background-color:#A5C5E3;"><a href="IO_Aufgabe_1.html" target="_self">1 Aufgabe</a></td>
+</tr>
+<tr id="IO" style="display:none;">
+    <td></td>
+    <td colspan="3">Du lernst verschiedene Wege kennen, wie du <i>Werte ein- und ausgeben</i> kannst.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('Operationen',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td style="background-color:#9BB9D8;"><a href="Operationen_1.html" target="_self">Operationen (6 Seiten)</a></td>
+    <td style="background-color:#9BB9D8;"><a href="Operationen_Quiz_1.html" target="_self">5 Fragen</a></td>
+    <td style="background-color:#9BB9D8;"><a href="Operationen_Aufgabe_1.html" target="_self">3 Aufgaben</a></td>
+</tr>
+<tr id="Operationen" style="display:none;">
+    <td></td>
+    <td colspan="3">Du lernst die grundlegenden <i>Operationen</i> f&uuml; <i>Zahlen</i> und <i>Zeichenketten</i> kennen.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('Bool',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td style="background-color:#8EABCE;"><a href="Bool_1.html" target="_self">Vergleichsoperationen (8 Seiten)</a></td>
+    <td style="background-color:#8EABCE;"><a href="Bool_Quiz_1.html" target="_self">2 Fragen</a></td>
+    <td style="background-color:#8EABCE;"><a href="Bool_Aufgabe_1.html" target="_self">1 Aufgabe</a></td>
+</tr>
+<tr id="Bool" style="display:none;">
+    <td></td>
+    <td colspan="3">Du lernst <i>Vergleichsoperatoren</i> und <i>logische Operatoren</i> kennen und anwenden.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('ifelse',this);"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td style="background-color:#829DC4;"><a href="ifelse_1.html" target="_self">Fallunterscheidungen (6 Seiten)</a></td>
+    <td style="background-color:#829DC4;"><a href="ifelse_Quiz_1.html" target="_self">4 Fragen</a></td>
+    <td style="background-color:#829DC4;"><a href="ifelse_Aufgabe_1.html" target="_self">4 Aufgaben</a></td>
+</tr>
+<tr id="ifelse" style="display:none;">
+    <td></td>
+    <td colspan="3">Du lernst, wie man <i>Fallunterscheidungen</i> und <i>Verzweigungen</i> mit <code>if() else</code> oder <code>switch() case</code> programmiert.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('schleifen',this);"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td style="background-color:#7690BA;"><a href="Schleifen_1.html" target="_self">Schleifen (6 Seiten)</a></td>
+    <td style="background-color:#7690BA;"><a href="Schleifen_Quiz_1.html" target="_self">2 Fragen</a></td>
+    <td style="background-color:#7690BA;"><a href="Schleifen_Aufgabe_1.html" target="_self">3 Aufgaben</a></td>
+</tr>
+<tr id="schleifen" style="display:none;">
+    <td></td>
+    <td colspan="3">Du lernst, wie man <i>Schleifen</i> mit <code>while</code>, <code>do while</code> oder <code>for</code> programmiert. Und warum Endlosschleifen so problematisch sind.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('funktionen',this);"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td style="background-color:#6C85B1;"><a href="Funktionen_1.html" target="_self">Funktionen (7 Seiten)</a></td>
+    <td style="background-color:#6C85B1;"><a href="Funktionen_Quiz_1.html" target="_self">4 Fragen</a></td>
+    <td style="background-color:#6C85B1;"><a href="Funktionen_Aufgabe_1.html" target="_self">2 Aufgaben</a></td>
+</tr>
+<tr id="funktionen" style="display:none;">
+    <td></td>
+    <td colspan="3">Du lernst, was <i>Funktionen</i> sind und wie man sie definiert. Ausserdem lernst du mehr zum Thema Variablen und viele vordefinierte Funktionen kennen.</td>
+</tr>
+</table>
+<table width="80%" border="0">
+<tr>
+    <th width="10px"></th>
+    <th width="40%">Extras</th>
+    <th width="20%"></th>
+    <th width="40%"></th>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('Tipps',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td style="background-color:#637BA9;"><a href="Tipps_1.html" target="_self">Programmiertipps (7 Seiten)</a></td>
+    <td style="background-color:#637BA9;"></td>
+    <td style="background-color:#637BA9;"></td>
+</tr>
+<tr id="Tipps" style="display:none;">
+    <td></td>
+    <td colspan="3">Du lernst Tipps und Tricks kennen, die dir beim Programmieren hilfreich sein k&ouml;nnen. Dazu geh&ouml;rt der Umgang mit <i>Kommentaren</i>, das kluge <i>Eintippen von Klammern</i> und das <i>Vergeben sinnvoller Namen</i>.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('CodeLab',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td style="background-color:#5D74A4;"><a href="ProgABC_codelab.html" target="_self">CodeLab</a></td>
+    <td style="background-color:#5D74A4;"></td>
+    <td style="background-color:#5D74A4;"></td>
+</tr>
+<tr id="CodeLab" style="display:none;">
+    <td></td>
+    <td colspan="3">Auch hier hast du einen direkten Zugriff auf das CodeLab.</td>
+</tr>
+</table>
+</div>
+
+<div id="info">
+<img src="../graf/closebox.png" id="closeinfobtn" width="20px" height="20px" alt="close" />
+</div>
+
+<div id="quest">
+<img src="../graf/closebox.png" id="closequestbtn" width="20px" height="20px" alt="close" />
+
+</div>
+
+
+<div id="navibottom">
+<img id="layout2" src="../graf/bckbottomleft.gif" width="11" height="71" alt="layoutbild" />
+<img id="layout" src="../graf/bckbottomright.gif" width="151" height="71" alt="layoutbild"/><br />
+Pfad:&nbsp;&nbsp;<a href="index.html">ProgrammierABC</a>&nbsp;/&nbsp;Inhalte
+</div>
+
+</body>
+</html>

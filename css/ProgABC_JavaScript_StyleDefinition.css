@@ -1,0 +1,23 @@
+.alphanum {
+    color:black;
+    }
+    
+.keyword {
+    color:#881350;
+    }
+    
+.function {
+    color:#003369;
+}
+
+.comment {
+    color:#236E25;
+}
+
+.string {
+    color:#EB7300;
+}
+
+.number {
+    color:#0000FF;
+}

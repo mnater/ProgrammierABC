@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/print.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_highlightCode();
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+    window.print();
+}
+</script>
+</head>
+<body>
+
+<h1 style="background-color:#A5C5E3;">Daten ein- und ausgeben</h1>
+<h2>Das Prinzip</h2>
+<p>
+Ein grundlegendes Prinzip beim Programmieren ist das EVA-Prinzip. EVA steht f&uuml;r <b>E</b>ingabe, <b>V</b>erarbeitung und <b>A</b>usgabe.
+Alle Programme funktionieren nach diesem Prinzip:<br />
+Man gibt Daten ein, das Programm verarbeitet sie und gibt ein Resultat aus. Vielleicht kennst du das Bild der Rechenmaschine.<br />
+<img src="../img/EVA.png" width="375" height="67" alt="Das EVA-Prinzip" /></p>
+<p>Zur Datenverarbeitung (dem Schritt in der Mitte) kommen wir sp&auml;ter.
+In diesem Kapitel lernst du, wie du Daten in ein Programm eingeben kannst und wie du dir Daten vom Programm ausgeben lassen kannst.</p>
+<p>Inhalt:<br />
+<a href="IO_2.html" class="nextlink">Datenausgabe</a><br />
+<a href="IO_5.html" class="nextlink">Dateneingabe</a><br />
+<a href="IO_9.html" class="nextlink">Daten und Programme speichern</a><br />
+</p>
+
+
+<h2>Datenausgabe - Variante 1</h2>
+<p>Wie du mit dem Befehl <span class="glossar" onclick="ProgABC_OpenGlossar('JS_Output')">output()</span> im CodeLab Daten ausgeben kannst, hast du bereits <a href="Werte_7.html" class="intlink">gesehen</a>, hier wird es aber noch einmal erkl&auml;rt.<br />
+output() ist ein vordefinierter Befehl (eine sogenannte <span class="glossar" onclick="ProgABC_OpenGlossar('Funktion')">Funktion</span>), der nur im CodeLab funktioniert. Mit output() kannst du dir jederzeit Daten in der rechten H&auml;lfte des CodeLabs ausgeben lassen, indem du sie zwischen die beiden Klammern notierst.</p>
+<div class="code">output('Hallo Welt!');
+output(1234);
+</div>
+<p>Du kannst auch eine Variable in die Klammern schreiben. Wenn sie g&uuml;ltig ist, wird dir der Wert der Variable ausgegeben.</p>
+<div class="wrongcode">begruessung = 'Guten Tag!';
+output(begruessung);
+output(ungueltig);
+</div>
+
+<h2>Datenausgabe - Variante 2</h2>
+<p>Es gibt noch eine zweite Variante, um dir Daten ausgeben zu lassen. Statt in der rechten H&auml;lfte von CodeLab, k&ouml;nnen Daten auch in einem kleinen Fenster angezeigt werden. Das geht mit dem Befehl <span class="glossar" onclick="ProgABC_OpenGlossar('JS_Alert')">alert()</span>.<br />
+Auch hier musst du die Daten wieder in die Klammern schreiben.</p>
+<p>
+Beispiel:</p>
+<div class="code">alert('Hallo Welt');
+alert(1234);
+</div>
+
+<h2>Unterschiede zwischen <code>alert()</code> und <code>output()</code></h2>
+<p>Beide Methoden haben vor und Nachteile:<br />
+<code>alert()</code> ist ein offizieller Befehl, der auch ausserhalb vom CodeLab funktioniert. Bei <code>alert()</code> wird das Programm solange angehalten, bis man auf das OK im Meldefenster klickt.</p>
+<p><code>output()</code> funktioniert dagegen nur im CodeLab. Daf&uuml;r wird das Programm nicht angehalten und man kann sich soviele Daten ausgeben lassen, wie man will (ohne tausendmal auf OK zu dr&uuml;cken).</p>
+
+<h2>Dateneingabe - Variante 1</h2>
+<p>Wie du die Daten ausgeben kannst, weisst du jetzt. Das A vom EVA-Prinzip w&auml;re somit erledigt.</p>
+<p>Nun geht es ums E: der Dateneingabe!<br />
+Auch hier gibt es mehrere Varianten (drei), wovon du die erste schon kennst.</p>
+<p>Wenn du n&auml;mlich im Programm einer Variable einen Wert zuordnest ist das auch eine Art von Dateneingabe. Man k&ouml;nnte sagen "die Daten werden als Wert in die Variable gegeben".</p>
+<p>
+Beispiel:</p>
+<div class="code">meinName = 'Eugen';
+</div>
+
+<h2>Dateneingabe - Variante 2</h2>
+<p>Auch f&uuml;r die Dateneingabe gibt es im CodeLab einen Befehl, der nur im CodeLab funktioniert. Analog zum <code>output()</code>-Befehl f&uuml;r die Ausgabe, heisst der Befehl f&uuml;r die Dateneingabe <span class="glossar" onclick="ProgABC_OpenGlossar('JS_Input')">input()</span>.</p>
+<p>Der <code>input()</code>-Befehl bewirkt, dass im CodeLab-Dialog eine Eingabezeile freigeschaltet wird, in die man einen Text eingeben kann. Ist man damit fertig, kann man durch Dr&uuml;cken der Enter-Taste den eingegebenen Wert dem Script &uuml;bergeben.</p>
+<p>Im Script kann man den eingegebenen Wert wie folgt &uuml;bernehmen:</p>
+<div class="code">eingabe = input();
+</div>
+<p>Die Eingabe ist dann in der Variable <code>eingabe</code> gespeichert.
+</p>
+<div class="achtung">
+input() darf nicht in einer &uuml;bergeordneten Struktur, wie einer "while"-, "do while"- oder "for"-Schleife, "if"-Verzweigung oder Funktion stehen. In diesem Fall ist <span class="glossar" onclick="ProgABC_OpenGlossar('JS_Prompt')">prompt()</span> zu verwenden.
+</div>
+
+<h2>Dateneingabe - Variante 3</h2>
+<p>Die dritte Variante ist etwas komplizierter. Hier wird wiederum ein vordefinierter Befehl verwendet: <span class="glossar" onclick="ProgABC_OpenGlossar('JS_Prompt')">prompt('Eingabeaufforderung','Voreinstellung');</span></p>
+<p><code>prompt()</code> zeigt ein Fenster mit einer Eingabeaufforderung und einem Textfeld an.</p>
+<p>Zwischen den Klammern m&uuml;ssen zwei Zeichenketten, die mit einem Komma getrennt sind, stehen. Die erste Zeichenkette umfasst den Text, der im Fenster angezeigt wird. Mit der zweiten Zeichenkette kann Text ins Textfeld geschrieben werden.<br />
+Werden statt der Zeichenkette nur zwei Anf&uuml;hrungszeichen (also eine leere Zeichenkette) geschrieben, wird kein Text angezeigt.<br />
+Die Funktion hat einen R&uuml;ckgabewert, der in einer Variable gespeichert werden kann.</p>
+<p>Beispiel:</p>
+<div class="code">name = prompt('Gib deinen Namen ein!','');
+</div>
+
+<h2>Unterschiede der drei Eingabemethoden</h2>
+<p>Die erste Methode, die Variablenzuweisung, wird vor allem dann verwendet, wenn die Daten w&auml;hrend der Laufzeit des Programms nicht mehr ge&auml;ndert werden und immer gleich sind.</p>
+<p>Die zweite Methode, mit dem <code>input()</code>-Befehl, wird dann verwendet, wenn die Abfolge von Ein- und Ausgaben im rechten CodeLab-Teil ersichtlich sein soll. Diese Methode ist keine offizielle Methode, sondern funktioniert nur im CodeLab.</p>
+<p>Die dritte Methode ist die sicherste und klarste. Ihr Nachteil ist, dass sp&auml;ter nicht immer ersichtlich ist, was genau eingegeben wurde.</p>
+
+<h2>Daten und Programme speichern</h2>
+<p>Wenn du selbst Programme schreibst, oder dein Programm Daten berechnet hat, wirst du das auch abspeichern wollen.</p>
+<p>Leider ist es aus sicherheitstechnischen Gr&uuml;nden nicht m&ouml;glich, Daten mit JavaScript aus dem Browser auf der Harddisk zu speichern.</p>
+<p>Wenn du also etwas speichern willst, musst du es mit der Maus ausw&auml;hlen, kopieren und in einem anderen Programm wieder einf&uuml;gen (am besten in deinem LogBuch).</p>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_UIinit();
+        document.getElementById('infobtn').style.visibility='visible';
+        document.getElementById('questbtn').style.visibility='visible';
+        document.getElementById('codelabbtn').style.visibility='visible';
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+}
+</script>
+</head>
+<body>
+<div id="logo">
+</div>
+<div id="navitop">
+<span id="infobtn">
+<img src="../graf/btninfo.gif" width="80" height="80" alt="goto info" />
+</span>
+<span id="questbtn">
+<img src="../graf/btnquest.gif" width="80" height="80" alt="goto quest" />
+</span>
+<span id="codelabbtn">
+<img src="../graf/btncodelab.gif" width="80" height="80" alt="goto codelab" />
+</span>
+</div>
+
+<div id="naviright">
+<img src="../graf/bckrighttop.gif" width="151" height="34" alt="layoutbild" />
+<span id="rightnavibtn">
+<a href="Operationen_1.html" title="N&auml;chstes Kapitel" rel="chapter"><img src="../graf/btnlast.gif" width="100" height="50" alt="Werte und Variablen" /></a><br />
+<a href="IO_4.html" title="N&auml;chste Seite" rel="next"><img src="../graf/btnnext.gif" width="100" height="50" alt="Vorw&auml;rts" /></a><br />
+</span>
+</div>
+
+<div id="navileft">
+<span id="leftnavibtn">
+<a href="Werte_1.html" title="Vorhergehendes Kapitel" rel="next"><img src="../graf/btnfirst.gif" width="100" height="50" alt="Einstieg" /></a><br />
+<a href="IO_2.html" title="Vorhergehende Seite" rel="next"><img src="../graf/btnprev.gif" width="100" height="50" alt="Zur&uuml;ck" /></a><br />
+</span>
+</div>
+
+<div id="inhalte">
+<h2>Datenausgabe - Variante 2</h2>
+<p>Es gibt noch eine zweite Variante, um dir Daten ausgeben zu lassen. Statt in der rechten H&auml;lfte von CodeLab, k&ouml;nnen Daten auch in einem kleinen Fenster angezeigt werden. Das geht mit dem Befehl <span class="glossar" onclick="ProgABC_OpenGlossar('JS_Alert')">alert()</span>.<br />
+Auch hier musst du die Daten wieder in die Klammern schreiben.</p>
+<p>
+Beispiel:</p>
+<div class="code">alert('Hallo Welt');
+alert(1234);
+</div>
+</div>
+
+<div id="info">
+<img src="../graf/closebox.png" id="closeinfobtn" width="20px" height="20px" alt="close" />
+Wie das alert()-Fenster angezeigt wird ist von Browser zu Browser unterschiedlich. Gemeinsam ist aber, dass zugleich auch ein Warnton erklingt.
+</div>
+
+<div id="quest">
+<img src="../graf/closebox.png" id="closequestbtn" width="20px" height="20px" alt="close" />
+Schreibe das zweite Beispiel der vorherigen Seite mit alert() statt mit output().
+</div>
+
+<div id="codelabtext" style="display:none">alert('Hallo Welt');
+alert(1234);</div>
+
+<div id="navibottom">
+<img id="layout2" src="../graf/bckbottomleft.gif" width="11" height="71" alt="layoutbild" />
+<img id="layout" src="../graf/bckbottomright.gif" width="151" height="71" alt="layoutbild"/><br />
+Pfad:&nbsp;&nbsp;<a href="toc.html">Inhalte</a>&nbsp;/&nbsp;<a href="Programm_1.html">IO</a>&nbsp;/&nbsp;Seite 3<br />
+Seite:&nbsp;<a href="IO_1.html">1</a>&nbsp;<a href="IO_2.html">2</a>&nbsp;3&nbsp;<a href="IO_4.html">4</a>&nbsp;<a href="IO_5.html">5</a>&nbsp;<a href="IO_6.html">6</a>&nbsp;<a href="IO_7.html">7</a>&nbsp;<a href="IO_8.html">8</a>&nbsp;<a href="IO_9.html">9</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<title>ProgrammierABC</title>
+<link href="../css/main.css" type="text/css" rel="stylesheet"/>
+<link href="../css/ProgABC_JavaScript_StyleDefinition.css" type="text/css" rel="stylesheet"/>
+
+<script src="../scripts/ProgABC_UI.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_HLCode.js" type="text/javascript"></script>
+<script src="../scripts/ProgABC_JavaScript_SyntaxDefinition.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+window.onload = function init() {
+    try {
+        ProgABC_UIinit();
+        document.getElementById('infobtn').style.visibility='hidden';
+        document.getElementById('questbtn').style.visibility='hidden';
+        document.getElementById('codelabbtn').style.visibility='hidden';
+    }
+    catch(e)
+    {
+        alert(e);
+    }
+}
+
+function swapChapDesc(kapitel,elem)
+{
+    var mytr = document.getElementById(kapitel);
+    if(mytr.style.display=='none')
+    {
+        elem.firstChild.src='../graf/auf.png';
+        mytr.style.display='table-row';
+    }
+    else
+    {
+        elem.firstChild.src='../graf/zu.png';
+        mytr.style.display='none';
+    }
+
+}
+</script>
+</head>
+<body>
+<div id="logo">
+</div>
+<div id="navitop">
+<span id="infobtn">
+<img src="../graf/btninfo.gif" width="80" height="80" alt="goto info" />
+</span>
+<span id="questbtn">
+<img src="../graf/btnquest.gif" width="80" height="80" alt="goto quest" />
+</span>
+<span id="codelabbtn">
+<img src="../graf/btncodelab.gif" width="80" height="80" alt="goto codelab" />
+</span>
+</div>
+
+<div id="naviright">
+<img src="../graf/bckrighttop.gif" width="151" height="34" alt="layoutbild" />
+<span id="rightnavibtn">
+<a href="ende.html"><img src="../graf/btnlast.gif" width="100" height="50" alt="Index" /></a><br />
+<a href="Funktionen_Quiz_1.html"><img src="../graf/btnnext.gif" width="100" height="50" alt="Vorw&auml;rts" /></a><br />
+</span>
+</div>
+
+<div id="navileft">
+<span id="leftnavibtn">
+<a href="Schleifen_1.html"><img src="../graf/btnfirst.gif" width="100" height="50" alt="Schleifen" /></a><br />
+<a href="Funktionen_6.html"><img src="../graf/btnprev.gif" width="100" height="50" alt="Zur&uuml;ck" /></a><br />
+</span>
+</div>
+
+<div id="inhalte">
+<h2>Vordefinierte Funktionen</h2>
+<p>In jeder Programmiersprache gibt es vordefinierte Funktionen. Einige Funktionen k&ouml;nnen einfach so verwendet werden, andere stehen erst zur Verf&uuml;gung, wenn eine bestimmte Funktionsbibliothek in das Programm eingebunden wird.<br />
+Die Gesammtheit aller vordefinierter Funktionen nennt man API (Applications Programmer Interface). Je gr&ouml;sser das API ist, desto komplexere Programme kann man schreiben, desto l&auml;nger geht es aber, bis man die Sprache kennt...</p>
+<p>Auch in JavaScript gibt es viele vordefinierte Funktionen. Auf dieser Seite sind die wichtigsten Funktionen aufgelistet und erkl&auml;rt.</p>
+
+<h3><a name="Allgemein"></a>Allgemeine Funktionen</h3>
+
+<table width="100%" border="0">
+<tr>
+    <th></th>
+    <th>Name</th>
+    <th>Kurzbeschreibung</th>
+    <th>Beispiel</th>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('alert',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_Alert')">alert()</span></td>
+    <td>Zeigt ein Informations-Dialogfenster an.</td>
+    <td><code>alert('Hallo Welt!');</code></td>
+</tr>
+<tr id="alert" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>void alert(string Textmedlung)</code><br />Die Funktion alert() erwartet einen String-Parameter. Dieser Text wird in einem Dialogfenster ausgegeben.<br />
+Das Programm wird angehalten, bis der Benutzer 'OK' dr&uuml;ckt.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('confirm',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_Confirm')">confirm()</span></td>
+    <td>Zeigt ein Frage-Dialogfenster an.</td>
+    <td><code>halt=confirm('Beenden?');</code></td>
+</tr>
+<tr id="confirm" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>bool confirm(string Textmeldung)</code><br />Die Funktion confirm() erwartet als Parameter eine Ja/Nein-Frage. Liefert true oder false zur&uuml;ck.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('prompt',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_Prompt')">prompt()</span></td>
+    <td>Zeigt ein Eingabe-Dialogfenster an.</td>
+    <td><code>eingabe=prompt('Name:','');</code></td>
+</tr>
+<tr id="prompt" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>string prompt(string Textmeldung, string Feldvorbelegung)</code><br />Die Funktion prompt() zeigt ein Dialogfenster mit einer Eingabeaufforderung, einem Eingabefeld und einem OK- und Abbrechen-Button an.<br />
+    Erwartet zwei Parameter:<br />
+	<ol>
+	<li>Textmeldung = Text, der angibt, was einzugeben ist.</li>
+	<li>Feldvorbelegung = Text, der im Eingabefeld steht. Soll das Feld leer sein, muss man eine leere Zeichenkette "" &uuml;bergeben.</li>
+	</ol>
+	</td>
+</tr>
+</table>
+
+<h3><a name="Math">Math-Funktionen</a></h3>
+
+<p>Im Math-Objekt werden verschieden Konstanten und Funktionen f&uuml;r mathematische Berechnungen zusammengefasst. Um auf diese Konstanten oder Funktion zuzugreifen, muss man vor dem Aufruf <code>Math.</code> schreiben:</p>
+<div class="code">//Allgemein:
+//x=Math.Konstante;
+//x=Math.Funktion();
+pi=Math.PI;
+wurzel3=Math.sqrt(3);
+</div>
+<table width="100%" border="0">
+<tr>
+    <th></th>
+    <th>Name</th>
+    <th>Kurzbeschreibung</th>
+    <th>Beispiel</th>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('PI',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_PI')">Math.PI</span></td>
+    <td>Konstante &pi;</td>
+    <td><code>pi=Math.PI;</code></td>
+</tr>
+<tr id="PI" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>number Math.PI</code><br /><script type="text/javascript">document.write(Math.PI);</script></td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('abs',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_Abs')">Math.abs()</span></td>
+    <td>Positiver Wert einer Zahl</td>
+    <td><code>z=Math.abs(-2)</code></td>
+</tr>
+<tr id="abs" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>number Math.abs(number)</code><br />Erwartet als Parameter eine Zahl und berechnet den absoluten (positiven) Wert dieser Zahl.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('ceil',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_Ceil')">Math.ceil()</span></td>
+    <td>Rundet eine Zahl auf</td>
+    <td><code>z=Math.ceil(-3.456)</code></td>
+</tr>
+<tr id="ceil" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>number Math.ceil(number)</code><br />Erwartet als Parameter eine Zahl und rundet diese Zahl auf die n&auml;chsth&ouml;here Ganzzahl auf.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('floor',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_Floor')">Math.floor()</span></td>
+    <td>Rundet eine Zahl ab</td>
+    <td><code>z=Math.floor(-3.456)</code></td>
+</tr>
+<tr id="floor" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>number Math.floor(number)</code><br />Erwartet als Parameter eine Zahl und rundet diese Zahl auf die n&auml;chstniedrigere Ganzzahl ab.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('pow',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_Floor')">Math.pow()</span></td>
+    <td>Berechnet die Potenz einer Zahl</td>
+    <td><code>z=Math.pow(2,8)</code></td>
+</tr>
+<tr id="pow" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>number Math.pow(number Basis, number Exponent)</code><br />
+    Erwartet zwei Zahlen als Parameter. Die erste Zahl ist die Basis, die zweite der Exponent. Gibt Basis hoch Exponent zur&uuml;ck.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('random',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_Random')">Math.random()</span></td>
+    <td>Zufallszahl zwischen 0 und 1</td>
+    <td><code>z=Math.random()</code></td>
+</tr>
+<tr id="random" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>number Math.random()</code><br />
+    Gibt eine Bruchzahl zwischen 0 und 1 zur&uuml;ck, z.B. <script type="text/javascript">document.write(Math.random());</script>. Erwartet keine Parameter.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('round',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_Round')">Math.round()</span></td>
+    <td>Rundet eine Zahl auf oder ab.</td>
+    <td><code>z=Math.round(3.589)</code></td>
+</tr>
+<tr id="round" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>number Math.round(number)</code><br />
+    Erwartet eine Zahl als Parameter. Rundet diese Zahl abh&auml;ngig von der ersten Stelle nach dem Komma auf oder ab.</td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('sqrt',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_Sqrt')">Math.sqrt()</span></td>
+    <td>Quadratwurzel</td>
+    <td><code>z=Math.sqrt(2)</code></td>
+</tr>
+<tr id="sqrt" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>number Math.sqrt(number)</code><br />
+    Erwartet eine Zahl als Parameter. Berechnet die Quadratwurzel dieser Zahl.</td>
+</tr>
+</table>
+
+<h3><a name="String">String-Funktionen</a></h3>
+<p>Im String-Objekt werden verschieden Konstanten und Funktionen f&uuml;r die Behandlung von Zeichenketten (Strings) zusammengefasst. Um auf diese Konstanten oder Funktion zuzugreifen, muss man sie mit eine Punkt getrennt hinter eine Zeichenkette schreiben:</p>
+<div class="code">//Allgemein:
+//x=String.Konstante;
+//x=String.Funktion();
+laenge='Hallo Welt'.length;
+GROSS='Hallo Welt'.toUpperCase();
+</div>
+<table width="100%" border="0">
+<tr>
+    <th></th>
+    <th>Name</th>
+    <th>Kurzbeschreibung</th>
+    <th>Beispiel</th>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('length',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_length')">length</span></td>
+    <td>Anzahl Zeichen</td>
+    <td><code>laenge='Hallo Welt'.length;</code></td>
+</tr>
+<tr id="length" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>number String.length</code><br />
+    Diese Eigenschaft speichert die Anzahl der Zeichen in einer Zeichenkette. Auch die Leerzeichen z&auml;hlen!
+    </td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('charAt',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_CharAt')">charAt()</span></td>
+    <td>Zeichen an Position</td>
+    <td><code>zeichen='Hallo Welt'.charAt(7);</code></td>
+</tr>
+<tr id="charAt" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>string String.charAt(number)</code><br />
+    Erwartet als Parameter eine Zahl. Liefert das Zeichen der Zeichenkette an der entsprechenden Position.
+    </td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('indexOf',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_indexOf')">indexOf()</span></td>
+    <td>Erste Position einer Zeichenkette</td>
+    <td><code>zeichen='Hallo Welt'.indexOf('Welt');</code></td>
+</tr>
+<tr id="indexOf" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>number String.indexOf(string)</code><br />
+    Erwartet eine Zeichenkette als Parameter. Sucht nach dieser Zeichenkette und gibt an, an welcher Stelle die Zeichenkette als erstes gefunden wurde.
+    </td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('lastIndexOf',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_LastIndexOf')">lastIndexOf()</span></td>
+    <td>Letze Position einer Zeichenkette</td>
+    <td><code>zeichen='Hallo Welt'.lastIndexOf('Welt');</code></td>
+</tr>
+<tr id="lastIndexOf" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>number String.lastIndexOf(string)</code><br />
+    Erwartet eine Zeichenkette als Parameter. Sucht nach dieser Zeichenkette und gibt an, an welcher Stelle die Zeichenkette als letztes gefunden wurde.
+    </td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('slice',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_Slice')">slice()</span></td>
+    <td>Extrahiert Zeichenkette</td>
+    <td><code>zeichen='Hallo Welt'.slice(0,4);</code></td>
+</tr>
+<tr id="slice" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>string String.slice(number Anfang, number Ende)</code><br />
+    Erwartet zwei Parameter: den Anfang und das Ende der zu extrahierenden Zeichenkette. Es wird bei 0 zu z&auml;hlen begonnen. Wenn man den zweiten Parameter wegl&auml;sst, wird bis zum Ende extrahiert.
+    </td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('substr',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_Substr')">substr()</span></td>
+    <td>Extrahiert Zeichenkette</td>
+    <td><code>zeichen='Hallo Welt'.substr(0,4);</code></td>
+</tr>
+<tr id="substr" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>string String.substr(number Anfang, number L&auml;nge)</code><br />
+    Erwartet zwei Parameter: den Anfang und die L&auml;nge der zu extrahierenden Zeichenkette. Es wird bei 0 zu z&auml;hlen begonnen. Wenn man den zweiten Parameter wegl&auml;sst, wird bis zum Ende extrahiert.
+    </td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('toLowerCase',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_ToLowerCase')">toLowerCase()</span></td>
+    <td>In Kleinbuchstaben umwandeln</td>
+    <td><code>zeichen='Hallo Welt'.toLowerCase();</code></td>
+</tr>
+<tr id="toLowerCase" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>string String.toLowerCase()</code><br />
+    Wandelt eine Zeichenkette in Kleinbuchstaben um. Erwartet keine Parameter.
+    </td>
+</tr>
+<tr>
+    <td onclick="swapChapDesc('toUpperCase',this);" style="cursor:pointer;"><img src="../graf/zu.png" width="10px" height="10px" alt="zu" /></td>
+    <td><span class="glossar" onclick="ProgABC_OpenGlossar('JS_ToUpperCase')">toLowerCase()</span></td>
+    <td>In Grossbuchstaben umwandeln</td>
+    <td><code>zeichen='Hallo Welt'.toUpperCase();</code></td>
+</tr>
+<tr id="toUpperCase" style="display:none;">
+    <td></td>
+    <td colspan="3"><code>string String.toUpperCase()</code><br />
+    Wandelt eine Zeichenkette in Grossbuchstaben um. Erwartet keine Parameter.
+    </td>
+</tr>
+</table>
+</div>
+
+<div id="info">
+<img src="../graf/closebox.png" id="closeinfobtn" width="20px" height="20px" alt="close" />
+</div>
+
+<div id="quest">
+<img src="../graf/closebox.png" id="closequestbtn" width="20px" height="20px" alt="close" />
+</div>
+
+
+
+<div id="navibottom">
+<img id="layout2" src="../graf/bckbottomleft.gif" width="11" height="71" alt="layoutbild" />
+<img id="layout" src="../graf/bckbottomright.gif" width="151" height="71" alt="layoutbild"/><br />
+Pfad:&nbsp;&nbsp;<a href="toc.html">Inhalte</a>&nbsp;/&nbsp;<a href="Funktionen_1.html">Funktionen</a>&nbsp;/&nbsp;Seite 7<br />
+Seite:&nbsp;<a href="Funktionen_1.html">1</a>&nbsp;<a href="Funktionen_2.html">2</a>&nbsp;<a href="Funktionen_3.html">3</a>&nbsp;<a href="Funktionen_4.html">4</a>&nbsp;<a href="Funktionen_5.html">5</a>&nbsp;<a href="Funktionen_6.html">6</a>&nbsp;7
+
+</body>
+</html>
